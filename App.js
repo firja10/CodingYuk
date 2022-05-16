@@ -1,6 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect, Component} from 'react';
-import { Image, StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Dimensions, ImageBackground, Button, Alert } from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Dimensions, ImageBackground, Button, Alert, StatusBar } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
@@ -18,6 +18,1730 @@ import ExpoGraphics from "expo-graphics";
 import ExpoTHREE, {THREE} from "expo-three";
 import Expo from "expo";
 import Halaman from "./src/Masuk/Halaman";
+
+import Lottie from './Lottie';
+
+
+
+import LottieView from "lottie-react-native";
+import { COLORS, SIZES } from './src/constants/theme';
+
+
+
+import slides from './slides';
+import slides_webinar from './slides_webinar';
+import data_events from './data_events';
+
+
+
+import AppIntroSlider from 'react-native-app-intro-slider' ;
+
+// import Router from './src/router/router';
+
+
+
+
+
+
+
+
+
+function SubClass(props) {
+
+
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {SubEventsstyle.home1}>
+        <View style = {SubEventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {SubEventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {SubEventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {SubEventsstyle.home2}>
+
+    <View style = {SubEventsstyle.home21}>
+    <Icon
+              raised
+              name='chevron-left'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() =>props.navigation.navigate('Events')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+         CLASS </Text>
+    </View>
+    </View>
+
+
+
+
+
+
+
+    <View style = {SubEventsstyle.home3}>
+
+      <View style = {SubEventsstyle.home31}>
+         
+
+         <Text style= {{color:'#ffff', fontWeight:'bold', fontSize:18, textAlign:'center'}}>PENDANAAN MODAL BAGI UMKM </Text>
+
+
+         <Image
+        source={require('./src/assets/SubClass1.png')}
+        style={{
+          width: 200,
+          height: 120,
+          marginTop:20,
+          marginBottom:20,
+        }}
+        // resizeMode="contain"
+      />
+
+      <View style = {SubClassstyle.home311}>
+        <View style = {{flexDirection:'row'}}>
+        <Text style = {{fontWeight:'bold', color:'#ffff', textAlign:'left', flex:1, fontSize:20}}>BAB 1</Text>
+        <View></View>
+        </View>
+
+
+        <View style = {{flexDirection:'row'}}>
+        <Text style = {{fontWeight:'bold', color:'#ffff', textAlign:'left', flex:1, fontSize:17}}>Macam-macam jenis sumber pendanaan </Text>
+        <View></View>
+        </View>
+      </View>
+
+
+
+
+
+      <View style = {SubClassstyle.home311}>
+        <View style = {{flexDirection:'row'}}>
+        <Text style = {{fontWeight:'bold', color:'#ffff', textAlign:'left', flex:1, fontSize:20}}>BAB 2</Text>
+        <View></View>
+        </View>
+
+
+        <View style = {{flexDirection:'row'}}>
+        <Text style = {{fontWeight:'bold', color:'#ffff', textAlign:'left', flex:1, fontSize:17}}>Kenali macam-macam jenis pendanaan  </Text>
+        <View></View>
+        </View>
+
+ 
+      </View>
+
+      <TouchableOpacity style = {{marginTop:20, padding:15, backgroundColor:COLORS.secondary, borderRadius:20}}>
+          <Text style = {{color:'#ffff', fontWeight:'bold', fontSize:20}} >
+            KUIS PENDANAAN
+          </Text>
+        </TouchableOpacity>
+
+
+
+
+
+
+      <View>
+
+      </View>
+
+
+
+      </View>
+
+
+    </View>
+
+
+
+
+      <View style = {SubEventsstyle.home4}>
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+  
+}
+
+
+
+
+
+
+const SubClassstyle = StyleSheet.create({
+  home1:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.tertiery,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'row',
+    paddingTop:30,
+    paddingBottom:10,
+    width:'100%',
+    paddingLeft:10,
+    paddingRight:10,
+  },
+
+  home11:{
+    // flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    width:'20%',
+
+  },
+
+  home12:{
+    // flex:2,
+    flexDirection:'row',
+    width:'20%',
+  },
+
+  home13:{
+    // flex:3,
+    flexDirection:'row',
+    width:'60%',
+  },
+
+  home2:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.primary,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'column',
+    paddingTop:30,
+    paddingBottom:10,
+    height:'100%',
+    width:'100%',
+    // paddingLeft:10,
+    // paddingRight:10,
+  },
+
+  home21:{
+    backgroundColor:COLORS.secondary,
+    width:'100%',
+    paddingLeft:15,
+    paddingRight:15,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    alignItems:'center',
+  },
+
+  home22:{
+    width:'100%',
+    padding:15,
+  },
+
+  home23:{
+    width:'100%',
+    padding:15,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home3:{
+    width:'100%',
+    paddingTop:10,
+    paddingRight:15,
+    paddingLeft:15,
+    paddingBottom:10,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home31:{
+    width:'100%',
+    backgroundColor:COLORS.primary,
+    flexDirection:'column',
+    paddingTop:10,
+    paddingBottom:20,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+    alignItems:'center',
+
+  },
+
+
+
+
+  home311:{
+    width:'100%',
+    backgroundColor:COLORS.secondary,
+    flexDirection:'column',
+    paddingTop:10,
+    paddingBottom:20,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+    alignItems:'center',
+
+  },
+
+  home4:{
+    width:'100%',
+    backgroundColor:COLORS.tertiery,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+
+  home41:{
+    flexDirection:'column',
+    marginLeft:10,
+    marginRight:10,
+
+  }
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Class(props) {
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='desktop'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          CLASS</Text>
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+      <View style = {Eventsstyle.home31} renderItem >
+      <View>
+      <Image
+              source={require('./src/assets/Class1.png')}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+              // resizeMode="contain"
+            />
+      </View>
+
+
+       <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>PENDANAAN MODAL BAGI UMKM </Text>
+        
+   
+        <View style = {{flexDirection:'row'}}>
+          <View style = {{flex:1}}>
+
+          </View>
+        <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
+        onPress = {()=> props.navigation.navigate('SubEvents')}
+        >
+            <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
+            <Image
+              source={require('./src/assets/blue_arrow.png')}
+              style={{
+                width: 15,
+                height: 15,
+              }}
+              // resizeMode="contain"
+            />
+            </Text>
+           
+          </TouchableOpacity>
+        </View>
+         
+
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Class2.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>KELOLA SUMBER DAYA UMKM AGAR BERJALAN LANCAR!{'\n'}</Text>
+  
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Class3.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>PELAJARI PENGELOLAAN KEUANGAN DAN LAPORAN KEUANGAN!{'\n'}</Text>
+  
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+
+
+  
+}
+
+
+
+function SubEvents(props) {
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {SubEventsstyle.home1}>
+        <View style = {SubEventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {SubEventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {SubEventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {SubEventsstyle.home2}>
+
+    <View style = {SubEventsstyle.home21}>
+    <Icon
+              raised
+              name='chevron-left'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() =>props.navigation.navigate('Events')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          EVENTS</Text>
+    </View>
+    </View>
+
+
+
+
+
+
+
+    <View style = {SubEventsstyle.home3}>
+
+      <View style = {SubEventsstyle.home31}>
+          <View style = {{flexDirection:'row'}}>
+          <Text style = {{color:'#ffff', alignItems:'center', flex:1}}>Suara Muhammadiyah &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+       
+          </Text>
+
+          <View ></View>
+
+          </View>
+
+            <View style = {SubEventsstyle.home31}>
+            <Image
+              source={require('./src/assets/Poster_Events1.png')}
+              style={{
+                width: 100,
+                height: 100,
+
+                alignContent:'center',
+                alignItems:'center',
+              }}
+              // resizeMode="contain"
+            />
+
+            <Text style = {{color:'#ffff', fontWeight:'bold', marginTop:10, textAlign:'center', marginBottom:10 }}>[FESTIVAL UMKM] PERESMIAN PUSAT GUDANG & FESTIVAL UMKM</Text>
+
+              <TouchableOpacity style = {{backgroundColor:COLORS.secondary, padding:15, borderRadius:10, marginBottom:10}}>
+                <Text style = {{color:'#ffff', fontWeight:'bold'}}>REGISTER</Text>
+              </TouchableOpacity>
+
+              <Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Pukul : 06.00 wib – selesai {'\n'}</Text>
+
+              <Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Hari/Tanggal : Ahad, 20 Februari 2022 {'\n'}</Text>
+
+              <Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Tempat : Pusat Gudang dan Dokumen Suara Muhammadiyah Jl. Timbangan Tebu, Bodeh, Ambarketawang, Gamping, Sleman {'\n'}</Text>
+
+              <Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Pendaftaran
+Link Pendaftaran
+https://bit.ly/umkmregister {'\n'}</Text>
+
+
+<Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Batas Waktu Pendaftaran hingga 11 Februari 2022 {'\n'}</Text>
+
+
+<Text style = {{color:'#ffff', fontWeight:'bold', textAlign:'center'}}> Info Lebih Lanjut Hubungi
+0821-3431-8616</Text>
+
+
+
+            </View>
+
+
+
+
+
+
+
+
+      </View>
+
+
+    </View>
+
+
+
+
+      <View style = {SubEventsstyle.home4}>
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {SubEventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+const SubEventsstyle = StyleSheet.create({
+  home1:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.tertiery,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'row',
+    paddingTop:30,
+    paddingBottom:10,
+    width:'100%',
+    paddingLeft:10,
+    paddingRight:10,
+  },
+
+  home11:{
+    // flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    width:'20%',
+
+  },
+
+  home12:{
+    // flex:2,
+    flexDirection:'row',
+    width:'20%',
+  },
+
+  home13:{
+    // flex:3,
+    flexDirection:'row',
+    width:'60%',
+  },
+
+  home2:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.primary,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'column',
+    paddingTop:30,
+    paddingBottom:10,
+    height:'100%',
+    width:'100%',
+    // paddingLeft:10,
+    // paddingRight:10,
+  },
+
+  home21:{
+    backgroundColor:COLORS.secondary,
+    width:'100%',
+    paddingLeft:15,
+    paddingRight:15,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    alignItems:'center',
+  },
+
+  home22:{
+    width:'100%',
+    padding:15,
+  },
+
+  home23:{
+    width:'100%',
+    padding:15,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home3:{
+    width:'100%',
+    paddingTop:10,
+    paddingRight:15,
+    paddingLeft:15,
+    paddingBottom:10,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home31:{
+    width:'100%',
+    backgroundColor:COLORS.primary,
+    flexDirection:'column',
+    paddingTop:10,
+    paddingBottom:20,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+    alignItems:'center',
+
+  },
+
+  home4:{
+    width:'100%',
+    backgroundColor:COLORS.tertiery,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+
+  home41:{
+    flexDirection:'column',
+    marginLeft:10,
+    marginRight:10,
+
+  }
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Events(props) {
+
+
+  StatusBar.setBarStyle('light-content', true);
+  StatusBar.setBackgroundColor(COLORS.primary);
+
+
+  const tombolLabel = (label) => {
+    return(
+      <View style = {{ padding:5, justifyContent:'center', alignItems:'center' }}>
+          <TouchableOpacity style = {{backgroundColor:COLORS.white, borderRadius:10, width:'100%', paddingTop:10, paddingBottom:10, paddingRight:20, paddingLeft:20 }}>
+            <Text style = {{color:COLORS.secondary}}>{label}</Text>
+          </TouchableOpacity>
+      </View>
+    )
+  }
+
+
+
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='calendar'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          EVENTS</Text>
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+      <View style = {Eventsstyle.home31} renderItem >
+      <View>
+      <Image
+              source={require('./src/assets/Poster_Events1.png')}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+              // resizeMode="contain"
+            />
+      </View>
+
+
+       <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+         <Text style = {{color:'#FF0000'}}>20 Februari 2022</Text>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[FESTIVAL UMKM] PERESMIAN PUSAT GUDANG & FESTIVAL UMKM{'\n'}</Text>
+        
+          <Text style = {{color:'#ffff', alignItems:'center'}}>Suara Muhammadiyah &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+        <View style = {{flexDirection:'row'}}>
+          <View style = {{flex:1}}>
+
+          </View>
+        <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
+        onPress = {()=> props.navigation.navigate('SubEvents')}
+        >
+            <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+            <Image
+              source={require('./src/assets/blue_arrow.png')}
+              style={{
+                width: 15,
+                height: 15,
+              }}
+              // resizeMode="contain"
+            />
+            </Text>
+           
+          </TouchableOpacity>
+        </View>
+         
+
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Poster_Events2.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FF0000'}}>25 Juni 2022</Text>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[WEBINAR] STRATEGI PEMBANGUNAN PRODUK UMKM{'\n'}</Text>
+  
+    <Text style = {{color:'#ffff', alignItems:'center'}}>Kemenkopukm &nbsp;
+    <Image
+        source={require('./src/assets/check_events.png')}
+        style={{
+          width: 12,
+          height: 12,
+        }}
+        // resizeMode="contain"
+      />
+      {'\n'}
+      {'\n'}
+    </Text>
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Poster_Events3.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FF0000'}}>24 September 2022</Text>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[WEBINAR] KEMITRAAN UMKM SAAT PANDEMI{'\n'}</Text>
+  
+    <Text style = {{color:'#ffff', alignItems:'center'}}>BEM Prasetya Mulya &nbsp;
+    <Image
+        source={require('./src/assets/check_events.png')}
+        style={{
+          width: 12,
+          height: 12,
+        }}
+        // resizeMode="contain"
+      />
+      {'\n'}
+      {'\n'}
+    </Text>
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+}
+
+
+
+
+
+
+
+
+const Eventsstyle = StyleSheet.create({
+  home1:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.tertiery,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'row',
+    paddingTop:30,
+    paddingBottom:10,
+    width:'100%',
+    paddingLeft:10,
+    paddingRight:10,
+  },
+
+  home11:{
+    // flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    width:'20%',
+
+  },
+
+  home12:{
+    // flex:2,
+    flexDirection:'row',
+    width:'20%',
+  },
+
+  home13:{
+    // flex:3,
+    flexDirection:'row',
+    width:'60%',
+  },
+
+  home2:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.primary,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'column',
+    paddingTop:30,
+    paddingBottom:10,
+    height:'100%',
+    width:'100%',
+    // paddingLeft:10,
+    // paddingRight:10,
+  },
+
+  home21:{
+    backgroundColor:COLORS.secondary,
+    width:'100%',
+    paddingLeft:15,
+    paddingRight:15,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    alignItems:'center',
+  },
+
+  home22:{
+    width:'100%',
+    padding:15,
+  },
+
+  home23:{
+    width:'100%',
+    padding:15,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home3:{
+    width:'100%',
+    paddingTop:15,
+    paddingRight:15,
+    paddingLeft:15,
+    paddingBottom:15,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home31:{
+    width:'100%',
+    backgroundColor:COLORS.quadratary,
+    flexDirection:'row',
+    paddingTop:20,
+    paddingBottom:20,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+    alignItems:'center',
+
+  },
+
+  home4:{
+    width:'100%',
+    backgroundColor:COLORS.tertiery,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+
+  home41:{
+    flexDirection:'column',
+    marginLeft:10,
+    marginRight:10,
+
+  }
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Welcome(props) {
+  const [showHomePage, setShowHomePage] = useState(true);
+
+  StatusBar.setBarStyle('light-content', true);
+  StatusBar.setBackgroundColor(COLORS.primary);
+
+
+  const tombolLabel = (label) => {
+    return(
+      <View style = {{ padding:5, justifyContent:'center', alignItems:'center' }}>
+          <TouchableOpacity style = {{backgroundColor:COLORS.white, borderRadius:10, width:'100%', paddingTop:10, paddingBottom:10, paddingRight:20, paddingLeft:20 }}>
+            <Text style = {{color:COLORS.secondary}}>{label}</Text>
+          </TouchableOpacity>
+      </View>
+    )
+  }
+
+
+  const buttonLabel = (label) => {
+    return(
+      <View style={{
+        padding: 12
+      }}>
+        <Text style={{
+          color: COLORS.title,
+          fontWeight: '600',
+          fontSize: SIZES.h4,
+        }}>
+          {label}
+        </Text>
+      </View>
+    )
+  }
+
+  // if(!showHomePage) {
+  //   return(
+  //     <AppIntroSlider
+  //       data={slides}
+  //       renderItem={({item}) => {
+  //         return(
+  //           <View style={{
+  //             flex: 1,
+  //             alignItems: 'center',
+  //             padding: 15,
+  //             paddingTop: 100,
+  //           }}>
+  //             <Image
+  //               source={item.image}
+  //               style={{
+  //                 width: SIZES.width - 80,
+  //                 height: 400,
+  //               }}
+  //               resizeMode="contain"
+  //             />
+  //             <Text style={{
+  //               fontWeight: 'bold',
+  //               color: COLORS.title,
+  //               fontSize: SIZES.h1,
+  //             }}>
+  //               {item.title}
+  //             </Text>
+  //             <Text style={{
+  //               textAlign: 'center',
+  //               paddingTop: 5,
+  //               color: COLORS.title
+  //             }}>
+  //               {item.description}
+  //             </Text>
+  //           </View>
+  //         )
+  //       }}
+  //       activeDotStyle={{
+  //         backgroundColor: COLORS.primary,
+  //         width: 30,
+  //       }}
+  //       showSkipButton
+  //       renderNextButton={() => buttonLabel("Next")}
+  //       renderSkipButton={() => buttonLabel("Skip")}
+  //       renderDoneButton={() => buttonLabel("Done")}
+  //       onDone={() => {
+  //         setShowHomePage(true);
+  //       }}
+  //     />
+  //   )
+  // }
+
+  // return(
+  //   <Router />
+  // )
+
+  return(
+    <AppIntroSlider
+      data={slides}
+      style={{backgroundColor:'#0C95FE'}}
+      renderItem={({item}) => {
+        return(
+          <View style={{
+            flex: 1,
+            alignItems: 'center',
+            padding: 15,
+            paddingTop: 100,
+          }}>
+            <Image
+              source={item.image}
+              style={{
+                width: SIZES.width - 80,
+                height: 300,
+              }}
+              resizeMode="contain"
+            />
+            <Text style={{
+              fontWeight: 'bold',
+              color: COLORS.white,
+              fontSize: SIZES.h1,
+              textAlign:'center',
+              marginTop:20,
+            }}>
+              {item.title}
+            </Text>
+            <Text style={{
+              textAlign: 'center',
+              paddingTop: 5,
+              color: COLORS.white,
+              marginTop:20,
+            }}>
+              {item.description}
+            </Text>
+          </View>
+        )
+      }}
+      activeDotStyle={{
+        backgroundColor: COLORS.white,
+        width: 30,
+      }}
+      // showSkipButton
+      renderNextButton={() => tombolLabel("Next")}
+      // renderSkipButton={() => tombolLabel("Skip")}
+      renderDoneButton={() => tombolLabel("Get Started")}
+      onDone={() => {
+        // setShowHomePage(true);
+        props.navigation.navigate('Home');
+      }}
+
+      bottomButton
+    />
+  )
+
+  
+}
 
 
 
@@ -106,11 +1830,11 @@ function augmentedreality() {
   <View>
    
 
-    <ImageBackground source={require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/arbg.jpeg')} resizeMode="cover" style = {{justifyContent:'center', alignItems:'center', height:700}} >
+    <ImageBackground source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/arbg.jpeg')} resizeMode="cover" style = {{justifyContent:'center', alignItems:'center', height:700}} >
     <View style = {{backgroundColor:'#ffff', padding:15, borderRadius:20, marginBottom:15}}>
     <Text style = {{justifyContent:'center', alignItems:'center', fontSize:20, fontWeight:'bold', color:'#25627F'}}>Level 1 Hello World</Text> 
     </View>
-      <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/robot.png')} style = {{width:200, height:300}} />
+      <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/robot.png')} style = {{width:200, height:300}} />
       {/* <Text>Hello Adri {'\n'}Saya Ingin Jadi Engineer</Text> */}
       <View style = {{alignItems:'center', justifyContent:'center', paddingLeft:15, paddingRight:15}}>
       <Text style = {{color:'#ffff', fontSize:18, fontWeight:'bold', justifyContent:'center', alignItems:'center', paddingLeft:15, paddingRight:15, marginBottom:20}}>Hallo Fairuz Saya ingin jadi Engineer</Text>
@@ -169,22 +1893,6 @@ function augmentedreality() {
 
 
 
-
-function test() {
-  return(
-    <View style = {{width:'80%'}}>
-      <View>
-             <YoutubePlayer
-       height={200}
-       marginTop={30}
-       play={true}
-       videoId='0SXltEa0Nzg'
-       />
-      </View>
-
-    </View>
-  )
-}
 
 
 
@@ -385,7 +2093,7 @@ onPress={() => props.navigation.navigate('Level 1')} />
       <View style = {{justifyContent:'center', alignItems:'center'}}>
       <Text style = {{color:'#25627F', alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:'bold'}} >Level 1</Text>
       <Text style = {{color:'#25627F',  alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:'bold'}} >"Hello World"</Text>
-      {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/hero-img.png')} style = {{width:120, height:120}} /> */}
+      {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:120, height:120}} /> */}
       </View>
       
     </View>
@@ -516,7 +2224,7 @@ function Levelsatu(props) {
 
   //   <View style = {styles.levelsatupage1}>
 
-  //     <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/hero-img.png')} style = {{width:10, height:10}}  />
+  //     <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:10, height:10}}  />
 
 
   //   </View>
@@ -547,7 +2255,7 @@ function Levelsatu(props) {
         </View>
 
         <View style = {{justifyContent:'center', alignItems:'center'}}>
-        <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/hero-img.png')} style = {{width:120, height:120}} />
+        <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:120, height:120}} />
         </View>
         
       </View>
@@ -573,7 +2281,7 @@ function Levelsatu(props) {
 
             <View style = {{width:'30%', padding:15, justifyContent:'center'}}>
             {/* <Text>Hallo</Text> */}
-              <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}}  />
+              <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}}  />
             </View>
        
             <View  style = {{width:'60%', padding:15, justifyContent:'center'}}>
@@ -766,14 +2474,542 @@ function scan(props) {
 
 
 
-function Home() {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Home(props) {
+
+
+  StatusBar.setBarStyle('light-content', true);
+  StatusBar.setBackgroundColor(COLORS.primary);
+
+
+  const tombolLabel = (label) => {
+    return(
+      <View style = {{ padding:5, justifyContent:'center', alignItems:'center' }}>
+          <TouchableOpacity style = {{backgroundColor:COLORS.white, borderRadius:10, width:'100%', paddingTop:10, paddingBottom:10, paddingRight:20, paddingLeft:20 }}>
+            <Text style = {{color:COLORS.secondary}}>{label}</Text>
+          </TouchableOpacity>
+      </View>
+    )
+  }
+
+
+
+
   return(
-    <View style = {styles.home}>
-      <Text>Home</Text>
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Homestyle.home1}>
+        <View style = {Homestyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Homestyle.home12}>
+
+        </View>
+
+
+        <View style = {Homestyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
     </View>
+
+
+    <View style = {Homestyle.home2}>
+      <View style = {Homestyle.home21} >
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:18}}>Hi Muters ! Ikuti Event Terdekat !</Text>
+      </View>
+
+      <View style = {Homestyle.home22}>
+
+
+
+      <AppIntroSlider
+      data={slides_webinar}
+      style={{backgroundColor:'#0C95FE'}}
+      renderItem={({item}) => {
+        return(
+          <View style={{
+            flex: 1,
+            alignItems: 'center',
+            paddingLeft: 15,
+            paddingRight:15,
+            paddingBottom:70,
+            paddingTop: 10,
+          }}>
+            <Image
+              source={item.image}
+              style={{
+                width: SIZES.width - 80,
+                height: 150,
+              }}
+              resizeMode="contain"
+            />
+       
+          </View>
+        )
+      }}
+      activeDotStyle={{
+        backgroundColor: COLORS.white,
+        width: 30,
+      }}
+      // showSkipButton
+      renderNextButton={() => tombolLabel("Next")}
+      // renderSkipButton={() => tombolLabel("Skip")}
+      renderDoneButton={() => tombolLabel("Next")}
+      onDone={() => {
+        // setShowHomePage(true);
+        props.navigation.navigate('Home');
+      }}
+
+      // bottomButton
+    />
+
+      </View>
+
+      <View style = {Homestyle.home23}>
+        <TouchableOpacity
+        style = {{alignItems:'center', justifyContent:'center'}}
+        onPress={() => console.log('hello')} 
+        >
+        <Icon
+          raised
+          name='calendar-check-o'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+          <Text style = {{color:COLORS.white}}>Events</Text>
+        </TouchableOpacity>
+
+
+
+
+
+        <TouchableOpacity
+        style = {{alignItems:'center', justifyContent:'center'}}
+        onPress={() => console.log('hello')} 
+        >
+        <Icon
+          raised
+          name='laptop'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+          <Text style = {{color:COLORS.white}}>Class</Text>
+        </TouchableOpacity>
+
+
+
+
+
+        <TouchableOpacity
+        style = {{alignItems:'center', justifyContent:'center'}}
+        onPress={() => console.log('hello')} 
+        >
+        <Icon
+          raised
+          name='newspaper-o'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+          <Text style = {{color:COLORS.white}}>Articles</Text>
+        </TouchableOpacity>
+
+
+
+
+
+        <TouchableOpacity
+        style = {{alignItems:'center', justifyContent:'center'}}
+        onPress={() => console.log('hello')} 
+        >
+        <Icon
+          raised
+          name='podcast'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+          <Text style = {{color:COLORS.white}}>Podcasts</Text>
+        </TouchableOpacity>
+
+
+
+        <TouchableOpacity
+        style = {{alignItems:'center', justifyContent:'center', backgroundColor:COLORS.primary}}
+        onPress={() => console.log('hello')} 
+        >
+        <Icon
+          raised
+          name='money'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+          <Text style = {{color:COLORS.white}}>Store</Text>
+        </TouchableOpacity>
+      </View>
+
+    </View>
+
+
+
+    <View style = {Homestyle.home3}>
+
+      <View style = {Homestyle.home31}>
+      <View style = {{width:'30%'}}>
+      <Icon
+          raised
+          name='lightbulb-o'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+      </View>
+
+      <View style = {{width:'70%'}}>
+      <TouchableOpacity>
+      <Text
+        style = {{color:COLORS.white, paddingRight:10}}
+        >Ikuti Kuis untuk ketahui informasi yang kamu tahu tentang UMKM dan dapatkan skormu di sini !</Text>
+      </TouchableOpacity>
+
+  
+      </View>
+      </View>
+
+
+
+
+      <View style = {Homestyle.home31}>
+      <View style = {{width:'30%'}}>
+      <Icon
+          raised
+          name='search'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+      </View>
+
+      <View style = {{width:'70%'}}>
+      <TouchableOpacity>
+      <Text
+        style = {{color:COLORS.white, paddingRight:10}}
+        >Cari UMKM dengan sektor yang sama dan diskusikan tentang apa pun mengenai UMKM mu !</Text>
+
+      </TouchableOpacity>
+      </View>
+      </View>
+
+
+
+      <View style = {Homestyle.home31}>
+      <View style = {{width:'30%'}}>
+      <Icon
+          raised
+          name='bullhorn'
+          type='font-awesome'
+          color={COLORS.secondary}
+          backgroundColor={COLORS.secondary}
+          containerStyle={{backgroundColor:COLORS.secondary}}
+          />
+      </View>
+
+      <View style = {{width:'70%'}}>
+
+      <TouchableOpacity>
+      <Text
+        style = {{color:COLORS.white, paddingRight:10}}
+        >
+          Perkenalkan UMKM-mu dengan menyebar lebih banyak informasi. Daftarkan dirimu menjadi mentor, ikutilah seleksinya !
+        </Text>
+
+      </TouchableOpacity>
+      </View>
+      </View>
+
+    </View>
+
+      <View style = {Homestyle.home4}>
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
   );
+
+
 }
 
+
+const Homestyle = StyleSheet.create({
+  home1:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.tertiery,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'row',
+    paddingTop:30,
+    paddingBottom:10,
+    width:'100%',
+    paddingLeft:10,
+    paddingRight:10,
+  },
+
+  home11:{
+    // flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    width:'20%',
+
+  },
+
+  home12:{
+    // flex:2,
+    flexDirection:'row',
+    width:'20%',
+  },
+
+  home13:{
+    // flex:3,
+    flexDirection:'row',
+    width:'60%',
+  },
+
+  home2:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+    backgroundColor:COLORS.primary,
+    flex:1,
+    textAlign:'center',
+    flexDirection:'column',
+    paddingTop:30,
+    paddingBottom:10,
+    height:'100%',
+    width:'100%',
+    // paddingLeft:10,
+    // paddingRight:10,
+  },
+
+  home21:{
+    backgroundColor:COLORS.secondary,
+    width:'100%',
+    paddingLeft:15,
+    paddingRight:15,
+    paddingTop:20,
+    paddingBottom:20,
+  },
+
+  home22:{
+    width:'100%',
+    padding:15,
+  },
+
+  home23:{
+    width:'100%',
+    padding:15,
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home3:{
+    width:'100%',
+    paddingTop:15,
+    paddingRight:15,
+    paddingLeft:15,
+    paddingBottom:15,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center'
+  },
+
+  home31:{
+    width:'100%',
+    backgroundColor:COLORS.secondary,
+    flexDirection:'row',
+    paddingTop:10,
+    paddingBottom:10,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+
+  },
+
+  home4:{
+    width:'100%',
+    backgroundColor:COLORS.tertiery,
+    paddingTop:20,
+    paddingBottom:20,
+    flexDirection:'row',
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+
+  home41:{
+    flexDirection:'column',
+    marginLeft:10,
+    marginRight:10,
+
+  }
+
+
+
+});
 
 
 function Login(props)
@@ -800,42 +3036,157 @@ function Login(props)
     touched
      } = useFormik({
     validationSchema: InputSchema,
-    initialValues: { name: '' },
+    initialValues: { name: '', password:'' },
     onSubmit: values =>
       // alert(`Nama: ${values.name}`),
-      props.navigation.navigate('Beranda')
+      props.navigation.navigate('Welcome'),
     
   });
 
 
-  const [text, KetikNama] = React.useState('Ketik Namamu');
+  const [show, setShow] = React.useState(false);
+
+
+
+  useEffect(()=>{
+    setTimeout(()=>setShow(true), 3000);
+  }, [])
+
+
+
+  const [email, KetikEmail] = React.useState('Ketik Emailmu');
+
+  const [pass, KetikPassword] = React.useState('Ketik Passwordmu');
+
 
   return(
     <View style = {styles.login}>
 
-<ImageBackground source={require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/bg-login.png')} resizeMode="cover" style={styles.bgimage}>
-<Text style = {{justifyContent:'center', alignItems:'center', fontSize:30, fontWeight:'bold', color:'#ffff'}}> Yuk Daftar </Text>
-<TextInput 
-placeholder="Ketik Namamu"
+
+{show ?
+
+
+<ImageBackground source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/bg-login-1.png')} resizeMode="cover" style={styles.bgimage}>
+{/* <Text style = {{justifyContent:'center', alignItems:'center', fontSize:30, fontWeight:'bold', color:'#ffff'}}> MUTER</Text> */}
+
+<Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/logo_1.png')} style = {{width:'50%', height:'5%', justifyContent:'center', alignItems:'center'}} />
+
+
+<View style = {{ flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius:10,
+    marginTop:20,
+    }}>
+  <Icon 
+   raised
+   name='envelope'
+   type='font-awesome'
+   color='#5E17EB'
+   size={10}
+  />
+  <TextInput 
+placeholder="Ketik Emailmu"
 autoCapitalize='none'
 autoCompleteType='name'
 onBlur={handleBlur('name')}
 error={errors.name}
 touched={touched.name}
 onChangeText={handleChange('name')}
-// onChangeText={KetikNama} value = {text}
-  style={{width:'70%', height:30, backgroundColor:'#ffff', marginTop:20, borderRadius:10, paddingLeft:10}} />
-<TouchableOpacity style = {{width:'100%', height:30, backgroundColor:'#038089', marginTop:20, paddingTop:20, paddingBottom:20, paddingLeft:100, paddingRight:100, justifyContent:'center', borderRadius:30}}
+// onChangeText={KetikNama} 
+// value = {email}
+  style={{width:'70%', height:30, backgroundColor:'#ffff',  borderRadius:10, paddingLeft:10}} />
+</View>
+
+
+
+
+
+
+
+<View style = {{ flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+    borderRadius:10,
+    marginTop:20,
+    }}>
+  <Icon 
+   raised
+   name='lock'
+   type='font-awesome'
+   color='#5E17EB'
+   size={10}
+  />
+  <TextInput 
+  secureTextEntry={true}
+placeholder="Ketik Password"
+autoCapitalize='none'
+autoCompleteType='password'
+onBlur={handleBlur('password')}
+error={errors.password}
+touched={touched.password}
+onChangeText={handleChange('password')}
+// onChangeText={KetikNama} 
+// value = {pass}
+  style={{width:'70%', height:30, backgroundColor:'#ffff',  borderRadius:10, paddingLeft:10}} />
+</View>
+
+
+
+
+
+
+
+<View style = {{flexDirection:'row', width:'65%', marginTop:10}}>
+  <View style = {{flex:1}}>
+    {/* <Text></Text> */}
+  </View>
+
+  <View style = {{flex:2}}>
+  <TouchableOpacity>
+  <Text style = {{textAlign:'right', color:'#fff'}}>Forgot Your Password ?</Text>
+  </TouchableOpacity>
+ 
+  </View>
+
+</View>
+
+
+
+
+
+
+
+<TouchableOpacity style = {{width:'100%', height:30, backgroundColor:'#5E17EB', marginTop:30, paddingTop:20, paddingBottom:20, paddingLeft:100, paddingRight:100, justifyContent:'center', borderRadius:30}}
 //  onPress ={()=>props.navigation.navigate('Beranda')}
 onPress ={submitForm}
  
  >
-  <Text style = {{fontSize:20, fontWeight:'bold', color:'#ffff'}}>
-    Daftar
+  <Text style = {{fontSize:20, fontWeight:'bold', color:'#ffff', textDecorationLine:'underline' }}>
+    Sign In
   </Text>
 </TouchableOpacity>
 
+<TouchableOpacity style = {{marginTop:20}}>
+  <Text style = {{color:'#fff'}}>Don't have an account ?</Text>
+</TouchableOpacity>
+
+
+<TouchableOpacity style = {{marginTop:20}}>
+  <Text style = {{color:'#5E17EB'}}>REGISTER</Text>
+</TouchableOpacity>
+
+
+
 </ImageBackground>
+
+
+
+: <Lottie/>}
+
+
 
     </View>
   )
@@ -872,12 +3223,12 @@ function Landing(props){
           
        <View style = {styles.landingutamakiri1}>
           <Text style = {styles.textlandingkiri1}>Welcome To CodingYuk !</Text>
-          {/* <Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/hero-img.png')} style = {{width:150,height:150,justifyContent:'center', alignItems:'center'}} /> */}
+          {/* <Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:150,height:150,justifyContent:'center', alignItems:'center'}} /> */}
         </View>
 
         <View style = {styles.landingutamakanan1}>
           {/* <Text style = {styles.textlandingkanan1}>Welcome To CodingYuk !</Text> */}
-          <Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/hero-img.png')} style = {{width:150,height:150,justifyContent:'center', alignItems:'center'}} />
+          <Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:150,height:150,justifyContent:'center', alignItems:'center'}} />
         <Text>{'\n'}</Text>
         </View>
 
@@ -917,7 +3268,7 @@ function Landing(props){
 
 
 <View style = {{width:'50%'}}>
-<Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/barcode.png')} style = {{width:140,height:140,justifyContent:'center', alignItems:'center'}} />
+<Image source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/barcode.png')} style = {{width:140,height:140,justifyContent:'center', alignItems:'center'}} />
 </View>
 
 
@@ -946,12 +3297,12 @@ function Landing(props){
 
           <View style = {{width:'88%', height:100, backgroundColor:'rgba(203,108,230, 0.4)', marginTop:20, flexDirection:'row', borderRadius:20,}}>
               <View style = {{justifyContent:'center', alignItems:'center', width:'25%',  marginLeft:5}}>
-                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
               </View>
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'30%', marginLeft:5, marginRight:5, }}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>Level 1 {'\n'}Hello World</Text>
@@ -960,7 +3311,7 @@ function Landing(props){
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'37%', marginRight:5, flexDirection:'row'}}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>25 %</Text>
@@ -990,12 +3341,12 @@ function Landing(props){
 
           <View style = {{width:'88%', height:100, backgroundColor:'rgba(255, 222, 89, 0.4)', marginTop:20, flexDirection:'row', borderRadius:20,}}>
               <View style = {{justifyContent:'center', alignItems:'center', width:'25%',  marginLeft:5}}>
-                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/math-op-basic.png')} style = {{width:50, height:50}} />
+                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/math-op-basic.png')} style = {{width:50, height:50}} />
               </View>
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'30%', marginLeft:5, marginRight:5, }}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>Level 2 {'\n'}Yuk Berhitung 1</Text>
@@ -1004,7 +3355,7 @@ function Landing(props){
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'37%', marginRight:5, flexDirection:'row'}}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>25 %</Text>
@@ -1042,12 +3393,12 @@ function Landing(props){
 
           <View style = {{width:'88%', height:100, backgroundColor:'rgba(140,82,255, 0.1)', marginTop:20, flexDirection:'row', borderRadius:20,}}>
               <View style = {{justifyContent:'center', alignItems:'center', width:'25%',  marginLeft:5}}>
-                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/math-op.png')} style = {{width:50, height:50}} />
+                <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/math-op.png')} style = {{width:50, height:50}} />
               </View>
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'30%', marginLeft:5, marginRight:5, }}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>Level 3 {'\n'}Yuk Berhitung 2</Text>
@@ -1056,7 +3407,7 @@ function Landing(props){
 
 
               <View style = {{justifyContent:'center', alignItems:'center', width:'37%', marginRight:5, flexDirection:'row'}}>
-                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/CodingKuy/src/icons.png')} style = {{width:50, height:50}} />
+                {/* <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}} />
                  */}
 
                 <Text style = {{fontWeight:'bold', color:'#435665'}}>25 %</Text>
@@ -1192,6 +3543,49 @@ const DrawerNavigator = ()=>{
 
 
 
+
+
+
+<Drawer.Screen component = {Welcome} name = 'Welcome'    options={{
+            headerShown: false,
+            drawerItemStyle:{
+              display:'none',
+            
+            },
+            drawerContentContainerStyle:{
+              display:'none',
+            },
+            // headerLeftContainerStyle:{
+            //   display:'none',
+            // }
+            gestureEnabled:false,
+            swipeEnabled:false
+         
+          }}
+
+          />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <Drawer.Screen component = {Landing} name = 'Beranda'   options={{
           
           // title: 'My home',
@@ -1225,7 +3619,23 @@ const DrawerNavigator = ()=>{
             color:'#ED8D8D',
             display:'none',
           },
+
+
+
+
         }} />
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1251,6 +3661,8 @@ const DrawerNavigator = ()=>{
             // height:'50%',
             // borderRadius:20,
             // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
             
           },
           headerTintColor: '#fff',
@@ -1261,14 +3673,166 @@ const DrawerNavigator = ()=>{
             display:'none',
 
           },
-          // headerShown:false,
-          // drawerItemStyle:{
-          //   display:'none',
-          // }
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            display:'none',
+          }
         }} 
         
         // options={{drawerLabel: NullComponent}}
         />
+
+
+
+
+
+
+
+<Drawer.Screen component = {Events} name = 'Events'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+<Drawer.Screen component = {SubEvents} name = 'SubEvents'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+<Drawer.Screen component = {Class} name = 'Class'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+
+
+
+
+<Drawer.Screen component = {SubClass} name = 'SubClass'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+
 
 
 
@@ -1333,9 +3897,6 @@ const DrawerNavigator = ()=>{
       }}
     />
 
-    <Drawer.Screen
-    component = {test} name = 'Tes'
-    />
 
 
     <Drawer.Screen
@@ -1560,7 +4121,8 @@ const styles = StyleSheet.create({
   },
 
   login:{
-    backgroundColor:'#435665',
+    // backgroundColor:'#435665',
+    backgroundColor:'#0C95FE',
     height:'100%',
     width:'100%',
   },
