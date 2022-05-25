@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "CodingKuy",
-    "slug": "CodingKuy",
+    "name": "Muter",
+    "slug": "Muter",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
     ]
   },
-  "name": "CodingKuy"
+  "name": "Muter"
 }

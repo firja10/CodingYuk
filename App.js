@@ -7,14 +7,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import CircularProgress from "react-native-circular-progress-indicator";
 import * as Yup from 'yup';
 import {  useFormik } from "formik";
-import { Icon } from "react-native-elements";
+import { Icon, CheckBox } from "react-native-elements";
 import { useHistory } from "react-router-dom";
 import { BarCodeScanner } from "expo-barcode-scanner";
 import { WebView } from "react-native-webview";
 import YoutubePlayer from "react-native-youtube-iframe";
 
+import {RadioButton} from 'react-native-paper';
 
-import ExpoGraphics from "expo-graphics";
 import ExpoTHREE, {THREE} from "expo-three";
 import Expo from "expo";
 import Halaman from "./src/Masuk/Halaman";
@@ -37,6 +37,1746 @@ import data_events from './data_events';
 import AppIntroSlider from 'react-native-app-intro-slider' ;
 
 // import Router from './src/router/router';
+
+
+
+
+
+
+
+  function CariUMKM(props)
+  {
+
+    
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+function PostandDiscussion(props) {
+
+  const [checked, setChecked] = React.useState('first');
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35, marginLeft:10}}>
+        
+          Post and Discussion</Text>
+    </View>
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+  
+      
+
+
+      <View style = {Eventsstyle.home31}>
+     
+     <View style = {{marginLeft:15, marginRight:15}}>
+
+       <View style = {{flexDirection:'row', alignItems:'center'}}>
+         <Image
+         source={require('./src/assets/shoeshine.png')}
+         style = {{
+           width:20,
+           height:20,
+         }}
+         />
+
+        <Text style = {{color:COLORS.white,  fontWeight:'bold'}}> &nbsp;UMKM ShoeShine &nbsp;</Text>
+
+        <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+
+       </View>
+       <Text style = {{color:'#FFFF', marginTop:5}}>Menurut kalian penting ga sih punya dana tersendiri untuk marketing? Seberapa penting marketing untuk produk kita? 
+
+{'\n'}</Text>
+
+
+        <View style = {{flexDirection:'row'}}>
+          <TouchableOpacity>
+            <Text style = {{color:COLORS.white, fontWeight:'bold'}}>254 Likes</Text>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity style = {{marginLeft:10}}>
+            <Text style = {{color:COLORS.white, fontWeight:'bold'}}>10 Discussions</Text>
+          </TouchableOpacity>
+
+
+        </View>
+
+     
+
+
+     </View>
+
+    </View>
+
+
+
+
+
+    <View style = {{ width:'80%',
+    backgroundColor:COLORS.quadratary,
+    flexDirection:'column',
+    paddingTop:10,
+    paddingBottom:20,
+    paddingLeft:15,
+    paddingRight:15,
+    borderRadius:10,
+    marginTop:10,
+    alignItems:'center',}}>
+     
+     <View style = {{marginLeft:15, marginRight:15}}>
+
+       <View style = {{flexDirection:'row', alignItems:'center'}}>
+         <Image
+         source={require('./src/assets/shoeshine.png')}
+         style = {{
+           width:20,
+           height:20,
+         }}
+         />
+
+        <Text style = {{color:COLORS.white,  fontWeight:'bold'}}> &nbsp;Rania Wijaya &nbsp;</Text>
+
+        <Image
+              source={require('./src/assets/rani_wijaya.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+
+       </View>
+       <Text style = {{color:'#FFFF', marginTop:5}}>Menurutku sih penting. Meskipun kita artis sekalipun, namanya kalo punya usaha harus dipromosikan. Pengalaman UMKM-ku kemarin setelah meluangkan dana untuk marketing, penjualan meningkat 10%
+ 
+
+{'\n'}</Text>
+
+
+        <View style = {{flexDirection:'row'}}>
+          <TouchableOpacity>
+            <Text style = {{color:COLORS.white, fontWeight:'bold'}}>0 Likes</Text>
+          </TouchableOpacity>
+
+
+          <TouchableOpacity style = {{marginLeft:10}}>
+            <Text style = {{color:COLORS.white, fontWeight:'bold'}}>0 Comment</Text>
+          </TouchableOpacity>
+
+
+        </View>
+
+     
+
+
+     </View>
+
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+  
+}
+
+
+
+
+
+
+
+
+
+function Check(props) {
+
+
+  const [checked, setChecked] = React.useState('first');
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='credit-card'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          UMKM CHECK</Text>
+    </View>
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+  
+      
+
+      <View style = {Eventsstyle.home31}>
+     
+       <View style = {{marginLeft:15, marginRight:15}}>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Apakah UMKM kamu sudah matang dalam perencanaan keuangan usaha?{'\n'}</Text>
+
+        <View style = {{flexDirection:'row', alignItems:'center'}}>
+        <RadioButton
+        value="first"
+        status={checked === 'first' ? 'checked' : 'unchecked'}
+        onPress={() => setChecked('first')}
+        // color ="#0000"
+        // uncheckedColor = "#ffff"
+        label = "Sudah"
+      />
+      <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+        </View> 
+
+
+
+        <View style = {{flexDirection:'row', alignItems:'center'}}>
+        <RadioButton
+        value="first"
+        status={checked === 'first' ? 'checked' : 'unchecked'}
+        onPress={() => setChecked('first')}
+        // color ="#0000"
+        // uncheckedColor = "#ffff"
+        
+        label = "Sudah"
+      />
+      <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
+        </View> 
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31}>
+     
+     <View style = {{marginLeft:15, marginRight:15}}>
+       <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Sudahkah UMKM kamu membuat laporan keuangan untuk usaha setiap bulannya?{'\n'}</Text>
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+      </View> 
+
+
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
+      </View> 
+
+     </View>
+
+    </View>
+
+
+
+
+
+
+
+    <View style = {Eventsstyle.home31}>
+     
+     <View style = {{marginLeft:15, marginRight:15}}>
+       <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Apakah usaha anda sudah merencanakan dana untuk khusus marketing?{'\n'}</Text>
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+      </View> 
+
+
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
+      </View> 
+
+     </View>
+
+    </View>
+
+
+
+
+
+
+
+    <View style = {Eventsstyle.home31}>
+     
+     <View style = {{marginLeft:15, marginRight:15}}>
+       <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Sudahkah anda memperhatikan perilaku konsumen anda selama satu bulan untuk evaluasi?{'\n'}</Text>
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+      </View> 
+
+
+
+      <View style = {{flexDirection:'row', alignItems:'center'}}>
+      <RadioButton
+      value="first"
+      status={checked === 'first' ? 'checked' : 'unchecked'}
+      onPress={() => setChecked('first')}
+      // color ="#0000"
+      // uncheckedColor = "#ffff"
+      
+      label = "Sudah"
+    />
+    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
+      </View> 
+
+     </View>
+
+    </View>
+
+
+
+
+    <View style = {{marginTop:10, marginBottom:10, padding:10, backgroundColor:COLORS.secondary, borderRadius:10}}>
+      <TouchableOpacity>
+        <Text style = {{color:'#ffff', fontWeight:'bold'}}>
+        LIHAT SKOR
+        </Text>
+        
+      </TouchableOpacity>
+    </View>
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+  
+}
+
+
+
+
+const Checkstyle = StyleSheet.create({
+home3:{
+
+    width:'100%',
+    paddingTop:10,
+    paddingRight:15,
+    paddingLeft:15,
+    paddingBottom:10,
+    flexDirection:'column',
+    alignItems:'center',
+    justifyContent:'center'
+  
+},
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Store (props)
+{
+
+
+
+
+
+
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='credit-card'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          STORE</Text>
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+      <View style = {Eventsstyle.home31} renderItem >
+      <View>
+      <Image
+              source={require('./src/assets/Store1.png')}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+              // resizeMode="contain"
+            />
+      </View>
+
+
+       <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>FOUNDATION POWDER SHADE BEIGE {'\n'}</Text>
+
+         <TouchableOpacity>
+       <View style = {{flexDirection:'row', width:'80%'}}>
+        
+        <Image
+              source={require('./src/assets/cart_shop.png')}
+              style={{
+                width: 25,
+                height: 25,
+                borderRadius:20,
+              }}
+              // resizeMode="contain"
+            /> 
+       <Text style = {{color:'#ffff', alignItems:'center', marginLeft:5}}>
+         {/* &nbsp; */}
+          Tambahkan Ke Keranjang
+ 
+            {'\n'}
+            {'\n'}
+          </Text>
+    
+       </View>
+       </TouchableOpacity>
+
+
+
+
+
+
+        
+         <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Beauty Life Store  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+          </Text>
+   
+        <View style = {{flexDirection:'row'}}>
+          <View style = {{flex:1}}>
+
+          </View>
+        <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
+        onPress = {()=> props.navigation.navigate('SubClass')}
+        >
+            <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
+            <Image
+              source={require('./src/assets/blue_arrow.png')}
+              style={{
+                width: 15,
+                height: 15,
+              }}
+              // resizeMode="contain"
+            />
+            </Text>
+           
+          </TouchableOpacity>
+        </View>
+         
+
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Store2.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[CHILL PODCAST EP.5]
+UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
+
+
+
+<TouchableOpacity>
+       <View style = {{flexDirection:'row', width:'80%'}}>
+        
+        <Image
+              source={require('./src/assets/cart_shop.png')}
+              style={{
+                width: 25,
+                height: 25,
+                borderRadius:20,
+              }}
+              // resizeMode="contain"
+            /> 
+       <Text style = {{color:'#ffff', alignItems:'center', marginLeft:5}}>
+         {/* &nbsp; */}
+          Tambahkan Ke Keranjang
+ 
+            {'\n'}
+            {'\n'}
+          </Text>
+    
+       </View>
+       </TouchableOpacity>
+
+
+
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Shoes Bestie  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+
+          </Text>
+
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+<View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Store3.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>BUTUH GELAR TINGGI UNTUK BANGUN USAHA SUKSES? EMANG IYA?{'\n'}</Text>
+
+
+   <TouchableOpacity>
+       <View style = {{flexDirection:'row', width:'80%'}}>
+        
+        <Image
+              source={require('./src/assets/cart_shop.png')}
+              style={{
+                width: 25,
+                height: 25,
+                borderRadius:20,
+              }}
+              // resizeMode="contain"
+            /> 
+       <Text style = {{color:'#ffff', alignItems:'center', marginLeft:5}}>
+         {/* &nbsp; */}
+          Tambahkan Ke Keranjang
+ 
+            {'\n'}
+
+          </Text>
+    
+       </View>
+       </TouchableOpacity>
+
+
+  
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Bag Station  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+function Podcasts(props) {
+  
+
+
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='microphone'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          Podcasts</Text>
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+      <View style = {Eventsstyle.home31} renderItem >
+      <View>
+      <Image
+              source={require('./src/assets/Podcasts1.png')}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+              // resizeMode="contain"
+            />
+      </View>
+
+
+       <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[NGOPI PODCAST EP. 2]
+BAHAS YANG JARANG DIOMONGIN TENTANG UMKM! ft UMKM GoShoes {'\n'}</Text>
+        
+        
+         <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Beauty Life Store  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+   
+        <View style = {{flexDirection:'row'}}>
+          <View style = {{flex:1}}>
+
+          </View>
+        <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
+        onPress = {()=> props.navigation.navigate('SubClass')}
+        >
+            <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
+            <Image
+              source={require('./src/assets/blue_arrow.png')}
+              style={{
+                width: 15,
+                height: 15,
+              }}
+              // resizeMode="contain"
+            />
+            </Text>
+           
+          </TouchableOpacity>
+        </View>
+         
+
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Podcasts2.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>[CHILL PODCAST EP.5]
+UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
+
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Shoes Bestie  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+<View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Podcasts3.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>BUTUH GELAR TINGGI UNTUK BANGUN USAHA SUKSES? EMANG IYA?{'\n'}</Text>
+  
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Bag Station  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+function Articles(props) {
+
+
+
+
+  return(
+    <View style = {{backgroundColor:COLORS.primary}}>
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      <View style = {Eventsstyle.home1}>
+        <View style = {Eventsstyle.home11}>
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+        </View>
+
+
+        <View style = {Eventsstyle.home12}>
+
+        </View>
+
+
+        <View style = {Eventsstyle.home13} >
+
+        <Icon
+  raised
+  name='bell-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  style={{backgroundColor:COLORS.tertiery}}
+  onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='wechat'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+<Icon
+raised
+name='user-o'
+type='font-awesome'
+color={COLORS.tertiery}
+onPress={() => console.log('hello')} />
+
+
+
+        </View>
+
+   
+
+    </View>
+
+
+    <View style = {Eventsstyle.home2}>
+
+    <View style = {Eventsstyle.home21}>
+    <Icon
+              raised
+              name='newspaper-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => console.log('hello')} />
+
+        <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
+          &nbsp;
+          ARTICLES</Text>
+    </View>
+
+
+
+ 
+    </View>
+
+
+
+    <View style = {Eventsstyle.home3}>
+
+      <View style = {Eventsstyle.home31} renderItem >
+      <View>
+      <Image
+              source={require('./src/assets/Articles1.png')}
+              style={{
+                width: 120,
+                height: 120,
+              }}
+              // resizeMode="contain"
+            />
+      </View>
+
+
+       <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+         <Text style = {{color:'#FFFF', fontWeight:'bold'}}>UMKM BISA BERPARTISIPASI DALAM MENJAGA LINGKUNGAN? SIMAK CARANYA! {'\n'}</Text>
+        
+        
+         <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Beauty Life Store  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+   
+        <View style = {{flexDirection:'row'}}>
+          <View style = {{flex:1}}>
+
+          </View>
+        <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
+        onPress = {()=> props.navigation.navigate('SubClass')}
+        >
+            <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
+            <Image
+              source={require('./src/assets/blue_arrow.png')}
+              style={{
+                width: 15,
+                height: 15,
+              }}
+              // resizeMode="contain"
+            />
+            </Text>
+           
+          </TouchableOpacity>
+        </View>
+         
+
+
+       </View>
+
+      </View>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Articles2.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>TERNYATA UMKM SUMBANGKAN SEBAGIAN BESAR PENDAPATAN NEGARA, PEMERINTAH HARAP UMKM TERUS MAJU!{'\n'}</Text>
+
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Shoes Bestie  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+<View style = {Eventsstyle.home31} renderItem >
+
+
+<View>
+<Image
+        source={require('./src/assets/Articles3.png')}
+        style={{
+          width: 120,
+          height: 120,
+        }}
+        // resizeMode="contain"
+      />
+</View>
+
+
+ <View style = {{marginLeft:15, marginRight:15, width:'60%'}}>
+   <Text style = {{color:'#FFFF', fontWeight:'bold'}}>SEPENUHNYA DUKUNG UMKM, PEMERINTAH SIAPKAN STRATEGI DUKUNG UMKM MAJU!{'\n'}</Text>
+  
+   <Text style = {{color:'#ffff', alignItems:'center'}}>UMKM Bag Station  &nbsp;
+          <Image
+              source={require('./src/assets/check_events.png')}
+              style={{
+                width: 12,
+                height: 12,
+              }}
+              // resizeMode="contain"
+            />
+            {'\n'}
+            {'\n'}
+          </Text>
+
+  <View style = {{flexDirection:'row'}}>
+    <View style = {{flex:1}}>
+
+    </View>
+  <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}>
+      <Text style = {{color:'#ffff',}}>Selengkapnya &nbsp;
+      <Image
+        source={require('./src/assets/blue_arrow.png')}
+        style={{
+          width: 15,
+          height: 15,
+        }}
+        // resizeMode="contain"
+      />
+      </Text>
+     
+    </TouchableOpacity>
+  </View>
+   
+
+
+ </View>
+
+</View>
+
+
+
+
+
+
+
+
+
+
+    </View>
+
+
+
+
+      <View style = {Eventsstyle.home4}>
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')} />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Eventsstyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')} />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+      </View>
+
+
+
+      </ScrollView>
+    </View>
+
+  );
+
+
+
+}
+
+
+
 
 
 
@@ -177,10 +1917,6 @@ onPress={() => console.log('hello')} />
         </TouchableOpacity>
 
 
-
-
-
-
       <View>
 
       </View>
@@ -203,7 +1939,7 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Home')} />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -217,7 +1953,7 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -231,7 +1967,7 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -516,7 +2252,7 @@ onPress={() => console.log('hello')} />
 
           </View>
         <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
-        onPress = {()=> props.navigation.navigate('SubEvents')}
+        onPress = {()=> props.navigation.navigate('SubClass')}
         >
             <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
             <Image
@@ -676,7 +2412,7 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Home')} />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -690,7 +2426,7 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -704,7 +2440,7 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -880,7 +2616,7 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Home')} />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -894,7 +2630,7 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -908,7 +2644,7 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -1406,7 +3142,7 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Home')} />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -1420,7 +3156,7 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -1434,7 +3170,7 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -1789,28 +3525,6 @@ this.renderer.render(this.scene, this.camera);
 
 
 
-function augmentedrealitybenar() {
-
-
-
-
-  return(
-
-      <ExpoGraphics.View 
-        style = {{flex:1}}
-        onContextCreate={() => this.onContextCreate()}
-        onRender={() => this.onRender()}
-        arEnabled = {true}
-      />
-
-  );
-}
-
-
-
-
-
-
 
 function beranda() {
   return (
@@ -1886,120 +3600,6 @@ function augmentedreality() {
   );
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-function levelsatubelajar(props) {
-
-  return(
-    <View >
-      <ScrollView >
-        
-        <View style = {{
-              justifyContent:'center',
-              alignItems:'center',
-              marginTop:-10,
-              backgroundColor:'#ED8D8D',
-              height:500,
-              // borderRadius:30,
-        }}>
-        <View style = {{flexDirection:'row'}}>
-        <View style = {{alignItems:'stretch', marginLeft:10, width:'50%' }}>
-          <TouchableOpacity>
-          <Icon
-            raised
-            name='arrow-left'
-            type='font-awesome'
-            color='#ED8D8D'
-            onPress={() => props.navigation.navigate('Beranda')} />
-          </TouchableOpacity>
-      </View>
-        
-        <View style = {{width:'50%'}}>
-
-        </View>
-
-        </View>
-      
-      <Text style = {{color:'#25627F', fontWeight:'bold', fontSize:20}}> "Hello World" </Text>
-
-        <View style = {{height:200, width:'80%', justifyContent:'center', alignItems:'center', backgroundColor:'#424242', marginTop:20, marginBottom:20, borderRadius:20}}>
-       
-
-       <YoutubePlayer
-       height={200}
-       marginTop={30}
-       play={true}
-       videoId='0SXltEa0Nzg'
-       />
-       
-       
-       
-        {/* <WebView style = {{justifyContent:'center', alignItems:'center', marginTop:30}}
-   source={{html: '<iframe width="100%" height="50%" src="https://www.youtube.com/embed/0SXltEa0Nzg" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>'}}/> */}
-       
-       
-        </View>
-        {/* <View style = {{backgroundColor:'#f2f2f2', width:'100%', height:'100%'}}>
-
-        </View> */}
-
-        </View>
-        <View style = {{ backgroundColor:'#f2f2f2', width:'100%', height:350,borderRadius:50, marginTop:-30, alignItems:'center'}}>
-    
-
-        <View style={{
-          // alignSelf: 'stretch',
-          borderBottomWidth: 5,
-          borderBottomColor: 'rgba(66,66,66, 0.5)',
-          // width:'%50',
-          marginTop: 10,
-          width:100,
-          justifyContent:'center',
-          alignItems:'center',
-          marginBottom: 5
-        }} />
-
-
-            <Text style = {{marginTop:20, color:'#25627F', fontWeight:'bold', fontSize:20}}>Penjelasan Modul</Text>
-      
-
-          <View elevation = {10} style = {{ flexDirection:'row', borderRadius:20, marginTop:20, height:170, width:'80%', backgroundColor:'#f2f2f2', shadowColor:'#424242', shadowOpacity:0.8, shadowRadius:5, padding:10, marginBottom:20,  shadowOffset:{
-          height:5, width:5
-        }}}>
-          <Text style = {{color:'#25627F', fontWeight:'bold', fontSize:19}}>Pada Level 1 ini , kalian akan belajar cara menampilkan tulisan pada program, yaitu dengan perintah printf('ketik namamu'){'\n'} Gampang Bukan ? </Text>
-        </View>
-
-        <TouchableOpacity style = {{marginTop:20, backgroundColor:'#ED8D8D', padding:10, borderRadius:10}}
-        onPress = {()=>props.navigation.navigate('Level 1 Edit')}
-        >
-          <Text style = {{color:'#25627F', fontWeight:'bold'}}>Yuk Buat Codinganmu !</Text>
-        </TouchableOpacity>
-      
-        </View>
-
-      </ScrollView>
-    </View>
-  );
-
-  
-
-}
-
-
-
-
-
-
 
 
 
@@ -2181,33 +3781,6 @@ onPress={() => props.navigation.navigate('Level 1')} />
 
 
 }
-
-
-
-
-function Levelsatuscan() {
-  
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -2465,85 +4038,6 @@ function scan(props) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function Home(props) {
 
 
@@ -2666,7 +4160,7 @@ onPress={() => console.log('hello')} />
       <View style = {Homestyle.home23}>
         <TouchableOpacity
         style = {{alignItems:'center', justifyContent:'center'}}
-        onPress={() => console.log('hello')} 
+        onPress={() => props.navigation.navigate('Events')} 
         >
         <Icon
           raised
@@ -2685,7 +4179,7 @@ onPress={() => console.log('hello')} />
 
         <TouchableOpacity
         style = {{alignItems:'center', justifyContent:'center'}}
-        onPress={() => console.log('hello')} 
+        onPress={() => props.navigation.navigate('Class')} 
         >
         <Icon
           raised
@@ -2704,7 +4198,7 @@ onPress={() => console.log('hello')} />
 
         <TouchableOpacity
         style = {{alignItems:'center', justifyContent:'center'}}
-        onPress={() => console.log('hello')} 
+        onPress={() => props.navigation.navigate('Articles')} 
         >
         <Icon
           raised
@@ -2723,7 +4217,7 @@ onPress={() => console.log('hello')} />
 
         <TouchableOpacity
         style = {{alignItems:'center', justifyContent:'center'}}
-        onPress={() => console.log('hello')} 
+        onPress={() => props.navigation.navigate('Podcasts')} 
         >
         <Icon
           raised
@@ -2740,7 +4234,7 @@ onPress={() => console.log('hello')} />
 
         <TouchableOpacity
         style = {{alignItems:'center', justifyContent:'center', backgroundColor:COLORS.primary}}
-        onPress={() => console.log('hello')} 
+        onPress={() => props.navigation.navigate('Store')} 
         >
         <Icon
           raised
@@ -2845,7 +4339,7 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Home')} />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -2859,7 +4353,7 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -2873,7 +4367,7 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => console.log('hello')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -3440,17 +4934,6 @@ function Landing(props){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
         </View>
 
 
@@ -3724,6 +5207,78 @@ const DrawerNavigator = ()=>{
 
 
 
+  
+
+
+
+<Drawer.Screen component = {Podcasts} name = 'Podcasts'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+<Drawer.Screen component = {PostandDiscussion} name = 'Post and Discussion'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
 
 
 <Drawer.Screen component = {SubEvents} name = 'SubEvents'   options={{
@@ -3759,6 +5314,79 @@ const DrawerNavigator = ()=>{
 
 
 <Drawer.Screen component = {Class} name = 'Class'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+
+
+
+<Drawer.Screen component = {Store} name = 'Store'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+<Drawer.Screen component = {Check} name = 'UMKM Check'   options={{
           // title: 'My home',
           headerStyle: {
             backgroundColor: '#ED8D8D',
@@ -3833,9 +5461,36 @@ const DrawerNavigator = ()=>{
 
 
 
+<Drawer.Screen component = {Articles} name = 'Articles'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
 
 
 
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
 
 
 
@@ -3887,32 +5542,16 @@ const DrawerNavigator = ()=>{
     }}
     />
 
-    <Drawer.Screen component = {levelsatubelajar} name = 'Level 1 Belajar'
-      options = {{
-        // drawerItemStyle:{
-        //   display:'none',
-        // },
-
-        headerShown:false,
-      }}
-    />
+  
 
 
 
-    <Drawer.Screen
+    {/* <Drawer.Screen
     component = {beranda} name = 'Land'
-    />
+    /> */}
 
-    <Drawer.Screen
-    component = {augmentedreality} name = 'Augmented Reality'
-    options = {{
-      headerShown:false
-    }}
-    />
+  
 
-<Drawer.Screen
-    component = {augmentedrealitybenar} name = 'Coba AR'
-    />
 
 
 <Drawer.Screen
