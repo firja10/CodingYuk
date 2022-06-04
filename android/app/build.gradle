@@ -132,7 +132,8 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.codingkuy"
+        // applicationId "com.codingkuy"
+        applicationId "com.muter"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

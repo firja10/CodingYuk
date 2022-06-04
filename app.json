@@ -3,9 +3,19 @@
     "name": "Muter",
     "slug": "Muter",
     "version": "1.0.0",
+    "icon":"./src/logo_box.png",
+    "splash": {
+      "image": "./src/logo_box.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0C95FE"
+    },
+
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "package": "com.fairuzf10.Muter"
+    }
   },
   "name": "Muter"
 }

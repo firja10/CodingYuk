@@ -1,17 +1,18 @@
 // import { StatusBar } from 'expo-status-bar';
 import React, {useState, useEffect, Component} from 'react';
-import { Image, StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Dimensions, ImageBackground, Button, Alert, StatusBar } from 'react-native';
+import { Image, StyleSheet, Text, View, ScrollView, SafeAreaView, TextInput, Dimensions, ImageBackground, Button,StatusBar, ToastAndroid, Alert } from 'react-native';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer';
 import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
-import CircularProgress from "react-native-circular-progress-indicator";
+// import CircularProgress from "react-native-circular-progress-indicator"; Uninstall
 import * as Yup from 'yup';
 import {  useFormik } from "formik";
 import { Icon, CheckBox } from "react-native-elements";
-import { useHistory } from "react-router-dom";
-import { BarCodeScanner } from "expo-barcode-scanner";
-import { WebView } from "react-native-webview";
-import YoutubePlayer from "react-native-youtube-iframe";
+// import { useHistory } from "react-router-dom"; Uninstall
+// import { BarCodeScanner } from "expo-barcode-scanner";
+// import { WebView } from "react-native-webview";
+// import YoutubePlayer from "react-native-youtube-iframe"; Uninstall
+
 
 import {RadioButton} from 'react-native-paper';
 
@@ -47,9 +48,204 @@ import AppIntroSlider from 'react-native-app-intro-slider' ;
   function CariUMKM(props)
   {
 
-    
+    return(
+      <View>
+        
+      </View>
+    )
     
   }
+
+
+
+
+
+
+
+
+  function LihatSkor(props) {
+    const [checked, setChecked] = React.useState('first');
+
+    return(
+      <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+  
+  
+  
+  <View style = {Eventsstyle.home1}>
+          <View style = {Eventsstyle.home11}>
+            <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
+          </View>
+  
+  
+          <View style = {Eventsstyle.home12}>
+  
+          </View>
+  
+  
+          <View style = {Eventsstyle.home13} >
+  
+          <Icon
+    raised
+    name='bell-o'
+    type='font-awesome'
+    color={COLORS.tertiery}
+    style={{backgroundColor:COLORS.tertiery}}
+    onPress={() => console.log('hello')} 
+    size = {20}
+    />
+  
+  <Icon
+  raised
+  name='wechat'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
+  
+  <Icon
+  raised
+  name='user-o'
+  type='font-awesome'
+  color={COLORS.tertiery}
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
+  
+  
+  
+          </View>
+  
+     
+  
+      </View>
+  
+  
+  
+  
+        <ScrollView style = {{backgroundColor:COLORS.primary}}>
+        
+        
+    
+  
+      <View style = {Eventsstyle.home2}>
+  
+      <View style = {Eventsstyle.home21}>
+      <Icon
+                raised
+                name='sticky-note-o'
+                type='font-awesome'
+                color={COLORS.tertiery}
+                onPress={() => console.log('hello')} />
+  
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35, marginLeft:10}}>
+          
+            Skor Anda</Text>
+      </View>
+      </View>
+  
+  
+  
+      <View style = {Eventsstyle.home3}>
+
+        <View style = {{backgroundColor:'#5f9ea0', width:'80%', justifyContent:'center', alignItems:'center', paddingTop:10, paddingBottom:15, borderRadius:20}}>
+
+          <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:15}}> Selamat, Anda Mendapatkan Skor : </Text>
+
+          <Text style = {{fontSize:60, color:COLORS.white}}>85 %</Text>
+
+
+
+        </View>
+  
+    
+  
+   
+      </View>
+  
+  
+  
+  
+    
+  
+  
+        </ScrollView>
+  
+  
+  
+  
+  
+        <View style = {Eventsstyle.home4}>
+          <View style = {Eventsstyle.home41}>
+              <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+              <Icon
+                raised
+                name='home'
+                type='font-awesome'
+                color={COLORS.tertiery}
+                onPress={() => props.navigation.navigate('Home')}
+                size = {20}
+                />
+                <Text style = {{color:COLORS.white}}>Home</Text>
+              </TouchableOpacity>
+          </View>
+  
+  
+  
+          <View style = {Eventsstyle.home41}>
+              <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+              <Icon
+                raised
+                name='sticky-note-o'
+                type='font-awesome'
+                color={COLORS.tertiery}
+                onPress={() => props.navigation.navigate('Post and Discussion')}
+                size = {20}
+                />
+                <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+              </TouchableOpacity>
+          </View>
+  
+  
+  
+          <View style = {Eventsstyle.home41}>
+              <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+              <Icon
+                raised
+                name='search-plus'
+                type='font-awesome'
+                color={COLORS.tertiery}
+                onPress={() => props.navigation.navigate('UMKM Check')}
+                size = {20}
+                />
+                <Text style = {{color:COLORS.white}}>UMKM</Text>
+              </TouchableOpacity>
+          </View>
+  
+        </View>
+  
+  
+  
+  
+  
+  
+  
+      </View>
+  
+    );
+  
+
+
+
+
+
+
+
+
+  }
+
+
+
 
 
 
@@ -66,9 +262,11 @@ function PostandDiscussion(props) {
   const [checked, setChecked] = React.useState('first');
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+
+<View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -87,21 +285,27 @@ function PostandDiscussion(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -111,6 +315,13 @@ onPress={() => console.log('hello')} />
 
     </View>
 
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+      
+      
+  
 
     <View style = {Eventsstyle.home2}>
 
@@ -258,6 +469,15 @@ onPress={() => console.log('hello')} />
 
 
 
+  
+
+
+      </ScrollView>
+
+
+
+
+
       <View style = {Eventsstyle.home4}>
         <View style = {Eventsstyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
@@ -266,7 +486,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -280,7 +502,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -294,7 +518,9 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -303,7 +529,10 @@ onPress={() => console.log('hello')} />
 
 
 
-      </ScrollView>
+
+
+
+
     </View>
 
   );
@@ -324,10 +553,280 @@ function Check(props) {
 
   const [checked, setChecked] = React.useState('first');
 
+  var [skor, setSkor] = React.useState(null);
+
+
+
+  // MATANG UMKM
+
+
+  const [isMatang, setIsMatang] = useState([
+    { id: 1, value: 1, name: "Sudah", selected: false },
+    { id: 2, value: 0, name: "Belum", selected: false }
+  ]);
+
+
+
+
+  const onRadioBtnClickMatang = (item) => {
+    let updatedStateMatang = isMatang.map((isMatangItem) =>
+      isMatangItem.id === item.id
+        ? { ...isMatangItem, selected: true, value:1 }
+        : { ...isMatangItem, selected: false, value:0 }
+    );
+    setIsMatang(updatedStateMatang);
+  };
+
+
+
+
+  // MEMBUAT LAPORAN
+
+  const [isBuatLaporan, setIsBuatLaporan] = useState([
+    { id: 1, value: 1, name: "Sudah", selected: false },
+    { id: 2, value: 0, name: "Belum", selected: false }
+  ]);
+
+
+
+
+  const onRadioBtnClickBuatLaporan = (item) => {
+    let updatedStateBuatLaporan = isBuatLaporan.map((isBuatLaporanItem) =>
+      isBuatLaporanItem.id === item.id
+        ? { ...isBuatLaporanItem, selected: true, value:1 }
+        : { ...isBuatLaporanItem, selected: false, value:0 }
+    );
+    setIsBuatLaporan(updatedStateBuatLaporan);
+  };
+
+
+  //Merencanakan Dana 
+
+  const [isBuatRencanaDana, setIsBuatRencanaDana] = useState([
+    { id: 1, value: 1, name: "Sudah", selected: false },
+    { id: 2, value: 0, name: "Belum", selected: false }
+  ]);
+
+
+
+
+  const onRadioBtnClickBuatRencanaDana = (item) => {
+    let updatedStateBuatRencanaDana = isBuatLaporan.map((isBuatRencanaDana) =>
+      isBuatRencanaDana.id === item.id
+        ? { ...isBuatRencanaDana, selected: true, value:1 }
+        : { ...isBuatRencanaDana, selected: false, value:0 }
+    );
+    setIsBuatRencanaDana(updatedStateBuatRencanaDana);
+  };
+
+
+
+  //Perilaku Konsumen
+
+  // const [isPerilaku, setIsPerilaku] = useState([
+  //   { id: 1, value: true, name: "Sudah", selected: false },
+  //   { id: 2, value: false, name: "Belum", selected: false }
+  // ]);
+
+  const [isPerilaku, setIsPerilaku] = useState([
+    { id: 1, value: 1, name: "Sudah", selected: false },
+    { id: 2, value: 0, name: "Belum", selected: false }
+  ]);
+
+
+
+
+  const onRadioBtnClickPerilaku = (item) => {
+    let updatedStatePerilaku = isPerilaku.map((isPerilaku) =>
+      isPerilaku.id === item.id
+        ? { ...isPerilaku, selected: true, value:1 }
+        : { ...isPerilaku, selected: false, value:0 }
+    );
+    setIsPerilaku(updatedStatePerilaku);
+  };
+
+
+
+
+
+
+
+
+
+  var [setNilai, onsetNilai] = React.useState(null); 
+
+
+const PerubahanNilai = () =>{
+
+  
+
+  //PERILAKU
+ let updateNilaiPerilakuBenar = isPerilaku.selected = true;
+
+  let updateNilaiPerilakuSalah = isPerilaku.value = false;
+
+
+ //RENCANA DANA
+ 
+let updateNilaiBuatRencanaDanaBenar = isBuatRencanaDana.selected = true;
+
+let updateNilaiBuatRencanaDanaSalah = isBuatRencanaDana.value = false;
+
+
+
+//LAPORAN BENAR
+
+let updateNilaiBuatLaporanBenar = isBuatLaporan.selected = true;
+
+let updateNilaiBuatLaporanSalah = isBuatLaporan.value = false;
+
+
+
+//MATANG
+
+let updateNilaiMatangBenar = isMatang.selected = true ;
+let updateNilaiMatangSalah = isMatang.value = false;
+
+
+
+let TotalNilai = isMatang.value + isBuatLaporan.value + isBuatRencanaDana.value + isPerilaku.value;
+
+
+onsetNilai(TotalNilai);
+
+
+// Alert.alert('Selamat, Nilai Anda '  + TotalNilai);
+
+
+
+
+
+// if(updateNilaiMatangBenar || updateNilaiBuatLaporanBenar || updateNilaiBuatRencanaDanaBenar || updateNilaiPerilakuBenar)
+// {
+//   Alert.alert('Selamat, Nilai Anda 30 %')
+// }
+
+
+
+// else
+//  if((updateNilaiMatangBenar && updateNilaiBuatLaporanBenar) 
+// || (updateNilaiMatangBenar && updateNilaiBuatRencanaDanaBenar) 
+// ||  (updateNilaiMatangBenar && updateNilaiPerilakuBenar) 
+// || (updateNilaiBuatLaporanBenar && updateNilaiPerilakuBenar) 
+// || (updateNilaiBuatLaporanBenar && updateNilaiBuatRencanaDanaBenar)
+// || (updateNilaiPerilakuBenar && updateNilaiBuatRencanaDanaBenar)
+// )
+// {
+//   Alert.alert('Selamat, Nilai Anda 50 %')
+// }
+
+
+
+// else if((updateNilaiMatangBenar && updateNilaiBuatLaporanBenar && updateNilaiBuatRencanaDanaBenar) 
+// || (updateNilaiMatangBenar && updateNilaiBuatLaporanBenar && updateNilaiPerilakuBenar)
+// || (updateNilaiBuatRencanaDanaBenar && updateNilaiBuatLaporanBenar && updateNilaiPerilakuBenar)
+
+// )
+// {
+//   Alert.alert('Selamat, Nilai Anda 85 %')
+// }
+
+// else if(updateNilaiMatangBenar && updateNilaiBuatLaporanBenar && updateNilaiBuatRencanaDanaBenar && updateNilaiPerilakuBenar)
+// {
+//   Alert.alert('Selamat, Nilai Anda 100 %')
+// }
+
+// else {
+//   Alert.alert('Nilai Anda Masih Kosong')
+// }
+
+
+// if(updateNilaiBuatRencanaDanaBenar)
+// {
+//   Alert.alert('Rencana Dana Benar');
+
+// }
+
+
+
+// else if(updateNilaiMatangBenar)
+// {
+
+//   Alert.alert('Nilai Matang Benar');
+
+// }
+
+
+// else if(updateNilaiBuatLaporanBenar)
+// {
+
+//   Alert.alert('Nilai Laporan Benar');
+
+// }
+
+// else if(updateNilaiPerilakuBenar)
+
+// {
+//   Alert.alert('Perilaku Benar');
+// }
+
+// else {
+//   Alert.alert('None');
+// }
+
+
+
+}
+
+
+
+// const onChangeAlertNilai =() =>{
+//   Alert.alert('Selamat, Nilai Anda '  + setNilai);
+// }
+
+
+
+
+
+
+
+// else if((updateNilaiMatangBenar && updateNilaiBuatLaporanBenar) || (updateNilaiMatangBenar && updateNilaiBuatLaporanBenar))
+
+
+
+
+
+
+
+
+
+
+
+
+  const RadioButton = ({ onPress, selected, children }) => {
+    return (
+      <View style={styles.radioButtonContainer}>
+        <TouchableOpacity onPress={onPress} style={styles.radioButton}>
+          {selected ? <View style={styles.radioButtonIcon} /> : null}
+        </TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
+          <Text style={styles.radioButtonText}>{children}</Text>
+        </TouchableOpacity>
+      </View>
+    );
+  };
+
+
+
+
+
+
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+
+<View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -346,21 +845,27 @@ function Check(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -370,6 +875,11 @@ onPress={() => console.log('hello')} />
 
     </View>
 
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+   
+   
 
     <View style = {Eventsstyle.home2}>
 
@@ -400,30 +910,21 @@ onPress={() => console.log('hello')} />
          <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Apakah UMKM kamu sudah matang dalam perencanaan keuangan usaha?{'\n'}</Text>
 
         <View style = {{flexDirection:'row', alignItems:'center'}}>
-        <RadioButton
-        value="first"
-        status={checked === 'first' ? 'checked' : 'unchecked'}
-        onPress={() => setChecked('first')}
-        // color ="#0000"
-        // uncheckedColor = "#ffff"
-        label = "Sudah"
-      />
-      <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
-        </View> 
+
+        {isMatang.map((item) => (
+     <RadioButton
+       onPress={() => onRadioBtnClickMatang(item)}
+       selected={item.selected}
+       key={item.id}
+       value = {item.value}
+     >
+    <Text style = {{color:COLORS.white}}>{item.name}</Text>   
+     
+     </RadioButton>
+  ))}
 
 
 
-        <View style = {{flexDirection:'row', alignItems:'center'}}>
-        <RadioButton
-        value="first"
-        status={checked === 'first' ? 'checked' : 'unchecked'}
-        onPress={() => setChecked('first')}
-        // color ="#0000"
-        // uncheckedColor = "#ffff"
-        
-        label = "Sudah"
-      />
-      <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
         </View> 
 
        </View>
@@ -442,31 +943,22 @@ onPress={() => console.log('hello')} />
        <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Sudahkah UMKM kamu membuat laporan keuangan untuk usaha setiap bulannya?{'\n'}</Text>
 
       <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+   
+
+      {isBuatLaporan.map((item) => (
+     <RadioButton
+       onPress={() => onRadioBtnClickBuatLaporan(item)}
+       selected={item.selected}
+       key={item.id}
+       value = {item.value}
+     >
+    <Text style = {{color:COLORS.white}}>{item.name}</Text>   
+     
+     </RadioButton>
+  ))}
+
       </View> 
 
-
-
-      <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
-      </View> 
 
      </View>
 
@@ -484,31 +976,27 @@ onPress={() => console.log('hello')} />
        <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Apakah usaha anda sudah merencanakan dana untuk khusus marketing?{'\n'}</Text>
 
       <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+      {isBuatRencanaDana.map((item) => (
+     <RadioButton
+       onPress={() => onRadioBtnClickBuatRencanaDana(item)}
+       selected={item.selected}
+       key={item.id}
+       value = {item.value}
+     >
+    <Text style = {{color:COLORS.white}}>{item.name}</Text>   
+     
+     </RadioButton>
+
+
+
+
+  ))}
+
+
+
       </View> 
 
 
-
-      <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
-      </View> 
 
      </View>
 
@@ -526,31 +1014,21 @@ onPress={() => console.log('hello')} />
        <Text style = {{color:'#FFFF', fontWeight:'bold'}}>Sudahkah anda memperhatikan perilaku konsumen anda selama satu bulan untuk evaluasi?{'\n'}</Text>
 
       <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Sudah</Text>
+      {isPerilaku.map((item) => (
+     <RadioButton
+       onPress={() => onRadioBtnClickPerilaku(item)}
+       selected={item.selected}
+       key={item.id}
+       value = {item.value}
+     >
+    <Text style = {{color:COLORS.white}}>{item.name}</Text>   
+     
+     </RadioButton>
+  ))}
       </View> 
 
 
-
-      <View style = {{flexDirection:'row', alignItems:'center'}}>
-      <RadioButton
-      value="first"
-      status={checked === 'first' ? 'checked' : 'unchecked'}
-      onPress={() => setChecked('first')}
-      // color ="#0000"
-      // uncheckedColor = "#ffff"
-      
-      label = "Sudah"
-    />
-    <Text style = {{fontWeight:'bold', color:COLORS.white}}>Belum</Text>
-      </View> 
+   
 
      </View>
 
@@ -560,12 +1038,24 @@ onPress={() => console.log('hello')} />
 
 
     <View style = {{marginTop:10, marginBottom:10, padding:10, backgroundColor:COLORS.secondary, borderRadius:10}}>
-      <TouchableOpacity>
+      <TouchableOpacity
+      onPress={()=>props.navigation.navigate('LihatSkor')}
+      // onPress={()=>PerubahanNilai()}
+      // onPress = {()=>PerubahanNilai()}
+      >
         <Text style = {{color:'#ffff', fontWeight:'bold'}}>
         LIHAT SKOR
         </Text>
-        
       </TouchableOpacity>
+   
+        {/* <TouchableOpacity style = {{marginTop:10}}>
+
+          <Text>{setNilai}</Text>
+
+        </TouchableOpacity> */}
+
+    
+   
     </View>
 
 
@@ -574,6 +1064,9 @@ onPress={() => console.log('hello')} />
 
 
     </View>
+
+
+      </ScrollView>
 
 
 
@@ -586,7 +1079,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -600,7 +1095,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -614,7 +1111,9 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -623,7 +1122,10 @@ onPress={() => console.log('hello')} />
 
 
 
-      </ScrollView>
+
+
+
+
     </View>
 
   );
@@ -678,9 +1180,11 @@ function Store (props)
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+
+<View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -694,26 +1198,26 @@ function Store (props)
         <View style = {Eventsstyle.home13} >
 
         <Icon
-  raised
-  name='bell-o'
-  type='font-awesome'
-  color={COLORS.tertiery}
-  style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+          raised
+          name='bell-o'
+          type='font-awesome'
+          color={COLORS.tertiery}
+          style={{backgroundColor:COLORS.tertiery}}
+          onPress={() => console.log('hello')} />
 
-<Icon
-raised
-name='wechat'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+        <Icon
+        raised
+        name='wechat'
+        type='font-awesome'
+        color={COLORS.tertiery}
+        onPress={() => console.log('hello')} />
 
-<Icon
-raised
-name='user-o'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+        <Icon
+        raised
+        name='user-o'
+        type='font-awesome'
+        color={COLORS.tertiery}
+        onPress={() => console.log('hello')} />
 
 
 
@@ -722,6 +1226,11 @@ onPress={() => console.log('hello')} />
    
 
     </View>
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+
 
 
     <View style = {Eventsstyle.home2}>
@@ -810,7 +1319,7 @@ onPress={() => console.log('hello')} />
 
           </View>
         <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
-        onPress = {()=> props.navigation.navigate('SubClass')}
+        // onPress = {()=> props.navigation.navigate('SubClass')}
         >
             <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
             <Image
@@ -1030,6 +1539,10 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
 
 
 
+      </ScrollView>
+
+
+
       <View style = {Eventsstyle.home4}>
         <View style = {Eventsstyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
@@ -1038,7 +1551,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -1052,7 +1567,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -1066,7 +1583,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -1075,7 +1594,11 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
 
 
 
-      </ScrollView>
+
+
+
+
+
     </View>
 
   );
@@ -1103,9 +1626,12 @@ function Podcasts(props) {
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS, flex:1}}>
+
+
+
+
+<View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -1124,21 +1650,27 @@ function Podcasts(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -1147,6 +1679,14 @@ onPress={() => console.log('hello')} />
    
 
     </View>
+
+
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+
+
 
 
     <View style = {Eventsstyle.home2}>
@@ -1209,7 +1749,7 @@ BAHAS YANG JARANG DIOMONGIN TENTANG UMKM! ft UMKM GoShoes {'\n'}</Text>
 
           </View>
         <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
-        onPress = {()=> props.navigation.navigate('SubClass')}
+        // onPress = {()=> props.navigation.navigate('SubClass')}
         >
             <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
             <Image
@@ -1365,14 +1905,10 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
 
 
 
-
-
-
-
-
-
     </View>
 
+
+      </ScrollView>
 
 
 
@@ -1384,7 +1920,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -1398,7 +1936,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -1412,7 +1952,9 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -1421,7 +1963,8 @@ UMKM BUTUH MODAL BERAPA BUAT SUKSES?{'\n'}</Text>
 
 
 
-      </ScrollView>
+
+
     </View>
 
   );
@@ -1450,9 +1993,10 @@ function Articles(props) {
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+   <View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -1466,26 +2010,32 @@ function Articles(props) {
         <View style = {Eventsstyle.home13} >
 
         <Icon
-  raised
-  name='bell-o'
-  type='font-awesome'
-  color={COLORS.tertiery}
-  style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+        raised
+        name='bell-o'
+        type='font-awesome'
+        color={COLORS.tertiery}
+        style={{backgroundColor:COLORS.tertiery}}
+        onPress={() => console.log('hello')} 
+        size = {20}
+        />
 
-<Icon
-raised
-name='wechat'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+      <Icon
+      raised
+      name='wechat'
+      type='font-awesome'
+      color={COLORS.tertiery}
+      onPress={() => console.log('hello')} 
+      size = {20}
+      />
 
-<Icon
-raised
-name='user-o'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+      <Icon
+      raised
+      name='user-o'
+      type='font-awesome'
+      color={COLORS.tertiery}
+      onPress={() => console.log('hello')} 
+      size = {20}
+      />
 
 
 
@@ -1496,6 +2046,11 @@ onPress={() => console.log('hello')} />
     </View>
 
 
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+
+  
     <View style = {Eventsstyle.home2}>
 
     <View style = {Eventsstyle.home21}>
@@ -1555,7 +2110,7 @@ onPress={() => console.log('hello')} />
 
           </View>
         <TouchableOpacity style = {{flex:2,  marginRight:'10%'}}
-        onPress = {()=> props.navigation.navigate('SubClass')}
+        // onPress = {()=> props.navigation.navigate('SubClass')}
         >
             <Text style = {{color:'#ffff',}}>{'\n'}Selengkapnya &nbsp;
             <Image
@@ -1721,6 +2276,10 @@ onPress={() => console.log('hello')} />
 
 
 
+
+      </ScrollView>
+
+
       <View style = {Eventsstyle.home4}>
         <View style = {Eventsstyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
@@ -1729,7 +2288,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -1743,7 +2304,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -1757,7 +2320,9 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -1766,7 +2331,10 @@ onPress={() => console.log('hello')} />
 
 
 
-      </ScrollView>
+
+
+
+
     </View>
 
   );
@@ -1791,9 +2359,11 @@ function SubClass(props) {
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {SubEventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+
+<View style = {SubEventsstyle.home1}>
         <View style = {SubEventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -1812,21 +2382,27 @@ function SubClass(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -1837,6 +2413,19 @@ onPress={() => console.log('hello')} />
     </View>
 
 
+
+
+
+
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+
+
+
     <View style = {SubEventsstyle.home2}>
 
     <View style = {SubEventsstyle.home21}>
@@ -1845,7 +2434,7 @@ onPress={() => console.log('hello')} />
               name='chevron-left'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() =>props.navigation.navigate('Events')} />
+              onPress={() =>props.navigation.navigate('Class')} />
 
         <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:35}}>
           &nbsp;
@@ -1910,7 +2499,10 @@ onPress={() => console.log('hello')} />
  
       </View>
 
-      <TouchableOpacity style = {{marginTop:20, padding:15, backgroundColor:COLORS.secondary, borderRadius:20}}>
+      <TouchableOpacity style = {{marginTop:20, padding:15, backgroundColor:COLORS.secondary, borderRadius:20}}
+      onPress = {()=>props.navigation.navigate('UMKM Check')}
+      
+      >
           <Text style = {{color:'#ffff', fontWeight:'bold', fontSize:20}} >
             KUIS PENDANAAN
           </Text>
@@ -1930,6 +2522,11 @@ onPress={() => console.log('hello')} />
 
 
 
+      </ScrollView>
+    
+
+
+
 
       <View style = {SubEventsstyle.home4}>
         <View style = {SubEventsstyle.home41}>
@@ -1939,7 +2536,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -1953,7 +2552,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -1967,16 +2568,22 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
 
       </View>
-
-
-
-      </ScrollView>
+    
+    
+    
+    
+    
+    
+    
     </View>
 
   );
@@ -2054,12 +2661,18 @@ const SubClassstyle = StyleSheet.create({
 
   home22:{
     width:'100%',
-    padding:15,
+    paddingRight:15,
+    paddingBottom:10,
+    paddingLeft:15,
+    paddingTop:10,
   },
 
   home23:{
     width:'100%',
-    padding:15,
+    paddingRight:15,
+    paddingBottom:15,
+    paddingLeft:15,
+    paddingTop:15,
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'center'
@@ -2067,10 +2680,10 @@ const SubClassstyle = StyleSheet.create({
 
   home3:{
     width:'100%',
-    paddingTop:10,
+    paddingTop:15,
     paddingRight:15,
     paddingLeft:15,
-    paddingBottom:10,
+    paddingBottom:15,
     flexDirection:'column',
     alignItems:'center',
     justifyContent:'center'
@@ -2160,9 +2773,10 @@ const SubClassstyle = StyleSheet.create({
 function Class(props) {
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS, flex:1}}>
+
+    
+    <View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -2181,21 +2795,27 @@ function Class(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -2206,6 +2826,10 @@ onPress={() => console.log('hello')} />
     </View>
 
 
+    
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+     
+     
     <View style = {Eventsstyle.home2}>
 
     <View style = {Eventsstyle.home21}>
@@ -2392,15 +3016,10 @@ onPress={() => console.log('hello')} />
 
 
 
-
-
-
-
-
-
-
     </View>
 
+
+      </ScrollView>
 
 
 
@@ -2412,7 +3031,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -2426,7 +3047,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -2440,7 +3063,11 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              
+              size = {20}
+
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -2449,7 +3076,8 @@ onPress={() => console.log('hello')} />
 
 
 
-      </ScrollView>
+
+
     </View>
 
   );
@@ -2486,21 +3114,27 @@ function SubEvents(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')} 
+  size = {20}
+  />
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -2608,6 +3242,10 @@ https://bit.ly/umkmregister {'\n'}</Text>
 
 
 
+
+
+
+
       <View style = {SubEventsstyle.home4}>
         <View style = {SubEventsstyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
@@ -2616,7 +3254,9 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -2630,7 +3270,9 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -2644,12 +3286,19 @@ https://bit.ly/umkmregister {'\n'}</Text>
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
 
       </View>
+
+
+
+
+
 
 
 
@@ -2677,11 +3326,9 @@ https://bit.ly/umkmregister {'\n'}</Text>
 
 const SubEventsstyle = StyleSheet.create({
   home1:{
-    flex:1,
     justifyContent:'center',
     alignItems:'center',
     backgroundColor:COLORS.tertiery,
-    flex:1,
     textAlign:'center',
     flexDirection:'row',
     paddingTop:30,
@@ -2779,8 +3426,8 @@ const SubEventsstyle = StyleSheet.create({
   home4:{
     width:'100%',
     backgroundColor:COLORS.tertiery,
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop:10,
+    paddingBottom:15,
     flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
@@ -2854,9 +3501,12 @@ function Events(props) {
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Eventsstyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary,flex:1}}>
+
+
+
+
+<View style = {Eventsstyle.home1}>
         <View style = {Eventsstyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -2870,26 +3520,32 @@ function Events(props) {
         <View style = {Eventsstyle.home13} >
 
         <Icon
-  raised
-  name='bell-o'
-  type='font-awesome'
-  color={COLORS.tertiery}
-  style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+          raised
+          name='bell-o'
+          type='font-awesome'
+          color={COLORS.tertiery}
+          style={{backgroundColor:COLORS.tertiery}}
+          onPress={() => console.log('hello')}
+          size = {20}
+          />
 
-<Icon
-raised
-name='wechat'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+        <Icon
+        raised
+        name='wechat'
+        type='font-awesome'
+        color={COLORS.tertiery}
+        onPress={() => console.log('hello')}
+        size = {20}
+        />
 
-<Icon
-raised
-name='user-o'
-type='font-awesome'
-color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+        <Icon
+        raised
+        name='user-o'
+        type='font-awesome'
+        color={COLORS.tertiery}
+        onPress={() => console.log('hello')} 
+        size = {20}
+        />
 
 
 
@@ -2898,6 +3554,15 @@ onPress={() => console.log('hello')} />
    
 
     </View>
+
+
+
+
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+  
 
 
     <View style = {Eventsstyle.home2}>
@@ -3064,8 +3729,7 @@ onPress={() => console.log('hello')} />
 
 
 
-<View style = {Eventsstyle.home31} renderItem >
-
+<View style = {Eventsstyle.home31} >
 
 <View>
 <Image
@@ -3134,6 +3798,13 @@ onPress={() => console.log('hello')} />
 
 
 
+      </ScrollView>
+
+
+
+
+
+
       <View style = {Eventsstyle.home4}>
         <View style = {Eventsstyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
@@ -3142,7 +3813,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -3156,7 +3829,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')} 
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -3170,7 +3845,9 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
@@ -3179,7 +3856,9 @@ onPress={() => console.log('hello')} />
 
 
 
-      </ScrollView>
+
+
+
     </View>
 
   );
@@ -3196,11 +3875,11 @@ onPress={() => console.log('hello')} />
 
 const Eventsstyle = StyleSheet.create({
   home1:{
-    flex:1,
+
     justifyContent:'center',
     alignItems:'center',
     backgroundColor:COLORS.tertiery,
-    flex:1,
+  
     textAlign:'center',
     flexDirection:'row',
     paddingTop:30,
@@ -3298,7 +3977,7 @@ const Eventsstyle = StyleSheet.create({
   home4:{
     width:'100%',
     backgroundColor:COLORS.tertiery,
-    paddingTop:20,
+    paddingTop:10,
     paddingBottom:20,
     flexDirection:'row',
     justifyContent:'center',
@@ -3483,19 +4162,6 @@ function Welcome(props) {
 
 
 
-function cobalogin() {
-
-  <Halaman/>
-
-
-
-
-}
-
-
-
-
-
 
 
 
@@ -3533,74 +4199,6 @@ function beranda() {
   </View>
   );
 }
-
-
-
-
-
-
-function augmentedreality() {
-  return (
-  <View>
-   
-
-    <ImageBackground source={require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/arbg.jpeg')} resizeMode="cover" style = {{justifyContent:'center', alignItems:'center', height:700}} >
-    <View style = {{backgroundColor:'#ffff', padding:15, borderRadius:20, marginBottom:15}}>
-    <Text style = {{justifyContent:'center', alignItems:'center', fontSize:20, fontWeight:'bold', color:'#25627F'}}>Level 1 Hello World</Text> 
-    </View>
-      <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/robot.png')} style = {{width:200, height:300}} />
-      {/* <Text>Hello Adri {'\n'}Saya Ingin Jadi Engineer</Text> */}
-      <View style = {{alignItems:'center', justifyContent:'center', paddingLeft:15, paddingRight:15}}>
-      <Text style = {{color:'#ffff', fontSize:18, fontWeight:'bold', justifyContent:'center', alignItems:'center', paddingLeft:15, paddingRight:15, marginBottom:20}}>Hallo Fairuz Saya ingin jadi Engineer</Text>
-      
-      <View style = {{flexDirection:'row'}}>
-      <Icon
-      name='star'
-      type='font-awesome'
-      color='yellow'
-      onPress={() => console.log('hello')} 
-      style = {{marginTop:30, marginLeft:5, marginRight:5}}
-      />
-
-      <Icon
-      name='star'
-      type='font-awesome'
-      color='yellow'
-      onPress={() => console.log('hello')} 
-      style = {{marginTop:30}}
-      />
-
-      <Icon
-      name='star'
-      type='font-awesome'
-      color='yellow'
-      onPress={() => console.log('hello')} 
-      style = {{marginTop:30, marginLeft:5, marginRight:5}}
-      />
-
-      <Icon
-      name='star'
-      type='font-awesome'
-      color='yellow'
-      onPress={() => console.log('hello')} 
-      style = {{marginTop:30, marginLeft:5, marginRight:5}}
-      />
-
-      </View>
-
-      <TouchableOpacity style = {{backgroundColor:'#EC8D8E', marginTop:15, borderRadius:10}}>
-        <Text style = {{fontWeight:'bold', fontSize:20, padding:15, }}>Lanjut</Text>
-      </TouchableOpacity>
-
-      </View>
-  </ImageBackground>
-
-
-  </View>
-  );
-
-}
-
 
 
 
@@ -3784,255 +4382,6 @@ onPress={() => props.navigation.navigate('Level 1')} />
 
 
 
-function Levelsatu(props) {
-
-
-  const inputlevel1 = '#include<stdio.h> \n \n int main() \n { \n printf("Hallo"); \n printf("NAMA:isi nama kamu") \n print("Tulis Cita-citamu"); \n return 0;  }';
-
-
-
-  const history = useHistory();
-  return (
-  // <View style = {{alignItems:'center', justifyContent:'center', backgroundColor:'#424242'}} >
-
-  //   <View style = {styles.levelsatupage1}>
-
-  //     <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:10, height:10}}  />
-
-
-  //   </View>
-
-  //   <View style = {styles.levelsatupage2}>
-      
-  //   </View>
-
-
-  // </View> 
-  
-
-
-
-  <View>
-    <ScrollView >
-      
-      <View style = {styles.landinglevelsatu1} >
-        <View style = {{alignItems:'stretch', marginLeft:10}}>
-            <TouchableOpacity>
-            <Icon
-  raised
-  name='arrow-left'
-  type='font-awesome'
-  color='#ED8D8D'
-  onPress={() => props.navigation.navigate('Beranda')} />
-            </TouchableOpacity>
-        </View>
-
-        <View style = {{justifyContent:'center', alignItems:'center'}}>
-        <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/hero-img.png')} style = {{width:120, height:120}} />
-        </View>
-        
-      </View>
-
-      <View style = {styles.landinglevelsatu2}>
-      <View style={{
-          // alignSelf: 'stretch',
-          borderBottomWidth: 5,
-          borderBottomColor: 'rgba(66,66,66, 0.5)',
-          // width:'%50',
-          marginTop: 10,
-          width:100,
-          justifyContent:'center',
-          alignItems:'center',
-          marginBottom: 15
-        }} />
-        <Text style = {{color:'#25627F', alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:'bold'}} >Level 1</Text>
-        <Text style = {{color:'#25627F',  alignItems:'center', justifyContent:'center', fontSize:20, fontWeight:'bold'}} >"Hello World"</Text>
-
-          <View elevation = {5}  style = {{ flexDirection:'row', borderRadius:20, marginTop:20, height:70, width:'80%', backgroundColor:'#f2f2f2', shadowColor:'#424242', shadowOpacity:0.8, shadowRadius:2, shadowOffset:{
-            height:2, width:2
-          }}}>
-
-            <View style = {{width:'30%', padding:15, justifyContent:'center'}}>
-            {/* <Text>Hallo</Text> */}
-              <Image source = {require('D:/XAMPP/htdocs/khusus-mobile-apps/Muter/src/icons.png')} style = {{width:50, height:50}}  />
-            </View>
-       
-            <View  style = {{width:'60%', padding:15, justifyContent:'center'}}>
-              <Text style = {{fontSize:18, color:'#25627F', fontWeight:'bold'}}>Yuk Belajar Dulu !</Text>
-            </View>
-
-          </View>
-
-
-          {/* <View elevation = {10} style = {{ flexDirection:'row', borderRadius:20, marginTop:20, height:170, width:'80%', backgroundColor:'#f2f2f2', shadowColor:'#424242', shadowOpacity:0.8, shadowRadius:5, shadowOffset:{
-            height:5, width:5
-          }}}>
-
-          </View> */}
-
-
-          <View elevation = {10} style = {{ padding:20, flexDirection:'row', borderRadius:20, marginTop:20, height:180, width:'80%', backgroundColor:'#f2f2f2', shadowColor:'#424242', shadowOpacity:0.8, shadowRadius:5, shadowOffset:{
-            height:5, width:5
-          }}}>
-            <Text style = {{color:'#25627F', fontWeight:'bold'}} >
-                {inputlevel1}
-            </Text>
-
-          </View>
-
-
-
-
-
-
-
-
-          <View style = {{marginTop:30}}>
-
-            <TouchableOpacity style = {{backgroundColor:'#ED8D8D', padding:15, borderRadius:20}} onPress = {()=>props.navigation.navigate('Level 1 Edit')} >
-              <Text style = {{fontWeight:'bold', fontSize:15, color:'#25627F'}}>
-                Yuk Buat Codingmu !
-              </Text>
-            </TouchableOpacity>
-          </View>
-
-
-
-
-      </View>
-
-
-    </ScrollView>
-  </View>
-
-
-
-
-
-  ) ;
-}
-
-
-
-
-
-
-
-
-
-
-
-function scan(props) {
-  
-
-  const [hasPermission, setHasPermission] = useState(null);
-  const [scanned, setScanned] = useState(false);
-  const [text, setText] = useState('Belum Bisa Discan');
-
-  const askForCameraPermission = () => {
-    (async () =>{
-      const {status} = await BarCodeScanner.requestPermissionsAsync();
-      setHasPermission(status == 'granted')
-    })()
-  }
-
-  useEffect ( () =>{
-    askForCameraPermission();
-  },[]);
-
-
-  const navigation = useNavigation();
-
-
-  const handleBarCodeScanned = ({type,data,props}) =>{
-    setScanned(true);
-    setText(data);
-    console.log('Type: ' + type + '\nData:' + data);
-    navigation.navigate(data);
-  }
-
-
-  if(hasPermission==null)
-  {
-    return(
-      <View style = {styles.container}>
-        <Text>Requesting For Camera Permission</Text>
-      </View>
-    )
-  }
-
-  if(hasPermission==false){
-    return(
-      <View>
-        <Text>No Access To Camera</Text>
-        <TouchableOpacity style = {{backgroundColor:'#424242'}}>
-          <Text style = {{color:'#ffff'}}>Silakan Scan</Text>
-        </TouchableOpacity>
-      </View>
-    )
-  }
-
-
-
-  return(
-    <View style = {styles.container2}>
-
-<View style = {{width:'90%', justifyContent:'center', alignItems:'center', flexDirection:'row', marginBottom:30}} >
-    <View style = {{width:'45%'}}>
-       <TouchableOpacity>
-       <Icon
-  raised
-  name='arrow-left'
-  type='font-awesome'
-  color='#424242'
-  onPress={() => props.navigation.navigate('Beranda')} />
-         
-         </TouchableOpacity> 
-    </View>
-    
-    <View style = {{width:'45%'}}>
-       {/* <TouchableOpacity><Text>Kembali</Text></TouchableOpacity>  */}
-    </View>
-
-  </View>
-
-
-
-
-
-
-      <View style = {styles.barcodebox} >
-          <BarCodeScanner onBarCodeScanned = {scanned?undefined:handleBarCodeScanned} style = {{height:400, width:400, borderRadius:50, }} />
-      </View>
-
-      <Text style = {{justifyContent:'center', alignItems:'center', color:'#424242', marginTop:15}}>{text}</Text>
-
-      {/* {scanned && 
-      <TouchableOpacity onPress ={()=>setScanned(false)} style = {{backgroundColor:'#038089', width:'60%', height:20, marginTop:20, alignItems:'center', justifyContent:'center', padding:25, borderRadius:20}}><Text style = {{color:'#ffff', fontWeight:'bold', fontSize:25}}>Silakan Scan</Text></TouchableOpacity>
-      } */}
-
-      <TouchableOpacity onPress ={()=>setScanned(false)} ><Icon
-  raised
-  name='dot-circle-o'
-  type='font-awesome'
-  color='#424242'
-  onPress={() => console.log('Pindah')} /></TouchableOpacity>
-
-
-
-    </View>
-  )
-
-
-
-
-
-}
-
-
-
-
-
 
 
 
@@ -4059,9 +4408,10 @@ function Home(props) {
 
 
   return(
-    <View style = {{backgroundColor:COLORS.primary}}>
-      <ScrollView style = {{backgroundColor:COLORS.primary}}>
-      <View style = {Homestyle.home1}>
+    <View style = {{backgroundColor:COLORS.primary, flex:1}}>
+
+
+<View style = {Homestyle.home1}>
         <View style = {Homestyle.home11}>
           <Text style = {{color:COLORS.white, fontWeight:'bold', fontSize:20}}>MUTER</Text>
         </View>
@@ -4080,21 +4430,32 @@ function Home(props) {
   type='font-awesome'
   color={COLORS.tertiery}
   style={{backgroundColor:COLORS.tertiery}}
-  onPress={() => console.log('hello')} />
+  onPress={() => console.log('hello')}
+  size = {20}
+  
+  />
+
+
 
 <Icon
 raised
 name='wechat'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')}
+size = {20}
+/>
+
+
 
 <Icon
 raised
 name='user-o'
 type='font-awesome'
 color={COLORS.tertiery}
-onPress={() => console.log('hello')} />
+onPress={() => console.log('hello')} 
+size = {20}
+/>
 
 
 
@@ -4104,6 +4465,15 @@ onPress={() => console.log('hello')} />
 
     </View>
 
+
+
+
+
+
+
+
+      <ScrollView style = {{backgroundColor:COLORS.primary}}>
+     
 
     <View style = {Homestyle.home2}>
       <View style = {Homestyle.home21} >
@@ -4331,7 +4701,7 @@ onPress={() => console.log('hello')} />
 
     </View>
 
-      <View style = {Homestyle.home4}>
+      {/* <View style = {Homestyle.home4}>
         <View style = {Homestyle.home41}>
             <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
             <Icon
@@ -4339,7 +4709,9 @@ onPress={() => console.log('hello')} />
               name='home'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Home')} />
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Home</Text>
             </TouchableOpacity>
         </View>
@@ -4353,7 +4725,9 @@ onPress={() => console.log('hello')} />
               name='sticky-note-o'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('Post and Discussion')} />
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
             </TouchableOpacity>
         </View>
@@ -4367,16 +4741,79 @@ onPress={() => console.log('hello')} />
               name='search-plus'
               type='font-awesome'
               color={COLORS.tertiery}
-              onPress={() => props.navigation.navigate('UMKM Check')} />
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
               <Text style = {{color:COLORS.white}}>UMKM</Text>
             </TouchableOpacity>
         </View>
+
+      </View> */}
+
+
+
+      </ScrollView>
+
+
+
+
+
+
+
+      <View style = {Homestyle.home4}>
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='home'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Home')}
+              size = {20}
+              />
+              <Text style = {{color:COLORS.white}}>Home</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='sticky-note-o'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('Post and Discussion')}
+              size = {20}
+              />
+              <Text style = {{color:COLORS.white}}>Post and Discuss</Text>
+            </TouchableOpacity>
+        </View>
+
+
+
+        <View style = {Homestyle.home41}>
+            <TouchableOpacity style = {{justifyContent:'center', alignItems:'center'}}>
+            <Icon
+              raised
+              name='search-plus'
+              type='font-awesome'
+              color={COLORS.tertiery}
+              onPress={() => props.navigation.navigate('UMKM Check')}
+              size = {20}
+              />
+              <Text style = {{color:COLORS.white}}>UMKM</Text>
+            </TouchableOpacity>
+        </View>
+
+
+        
 
       </View>
 
 
 
-      </ScrollView>
     </View>
 
   );
@@ -4387,15 +4824,15 @@ onPress={() => console.log('hello')} />
 
 const Homestyle = StyleSheet.create({
   home1:{
-    flex:1,
+    // flex:1,
     justifyContent:'center',
     alignItems:'center',
     backgroundColor:COLORS.tertiery,
-    flex:1,
     textAlign:'center',
     flexDirection:'row',
     paddingTop:30,
     paddingBottom:10,
+
     width:'100%',
     paddingLeft:10,
     paddingRight:10,
@@ -4453,7 +4890,10 @@ const Homestyle = StyleSheet.create({
 
   home23:{
     width:'100%',
-    padding:15,
+    paddingRight:15,
+    paddingBottom:15,
+    paddingLeft:15,
+    paddingTop:3,
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'center'
@@ -4486,8 +4926,8 @@ const Homestyle = StyleSheet.create({
   home4:{
     width:'100%',
     backgroundColor:COLORS.tertiery,
-    paddingTop:20,
-    paddingBottom:20,
+    paddingTop:10,
+    paddingBottom:15,
     flexDirection:'row',
     justifyContent:'center',
     alignItems:'center',
@@ -4498,6 +4938,7 @@ const Homestyle = StyleSheet.create({
     flexDirection:'column',
     marginLeft:10,
     marginRight:10,
+
 
   }
 
@@ -4695,16 +5136,6 @@ onPress ={submitForm}
 
 
 
-
-
-
-function Task() {
-  return(
-    <View style = {styles.task}>
-      <Text>Task</Text>
-    </View>
-  );
-}
 
 function Landing(props){
 
@@ -5051,8 +5482,74 @@ const DrawerNavigator = ()=>{
 
 
 
+<Drawer.Screen component = {Home} name = 'Home'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
+
+          },
+
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'home'} type ={'font-awesome'} color = {color}></Icon>,
 
 
+
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          }
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+
+
+
+
+
+
+<Drawer.Screen component = {LihatSkor} name = 'LihatSkor'    options={{
+            headerShown: false,
+            drawerItemStyle:{
+              display:'none',
+            
+            },
+            drawerContentContainerStyle:{
+              display:'none',
+            },
+            // headerLeftContainerStyle:{
+            //   display:'none',
+            // }
+            gestureEnabled:true,
+            swipeEnabled:true,
+
+     
+
+         
+          }}
+
+
+          
+
+          />
 
 
 
@@ -5079,6 +5576,7 @@ const DrawerNavigator = ()=>{
 
           drawerItemStyle:{
             activeBackgroundColor:'#ED8D8D',
+            display:'none',
         
           },
 
@@ -5137,36 +5635,7 @@ const DrawerNavigator = ()=>{
 
 
     
-    <Drawer.Screen component = {Home} name = 'Home'   options={{
-          // title: 'My home',
-          headerStyle: {
-            backgroundColor: '#ED8D8D',
-            // height:'50%',
-            // borderRadius:20,
-            // marginTop:20,
-            elevation: 0, // remove shadow on Android
-            shadowOpacity: 0, // remove shadow on iOS
-            
-          },
-          headerTintColor: '#fff',
-          headerTitleStyle: {
-            fontWeight: 'bold',
-            // color:'#ED8D8D',
-            color:'#ffff',
-            display:'none',
 
-          },
-
-
-
-          headerShown:false,
-          drawerItemStyle:{
-            display:'none',
-          }
-        }} 
-        
-        // options={{drawerLabel: NullComponent}}
-        />
 
 
 
@@ -5199,7 +5668,16 @@ const DrawerNavigator = ()=>{
           headerShown:false,
           drawerItemStyle:{
             // display:'none',
-          }
+          },
+
+
+
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'calendar'} type ={'font-awesome'} color = {color}></Icon>,
+
+
+
         }} 
         
         // options={{drawerLabel: NullComponent}}
@@ -5236,7 +5714,12 @@ const DrawerNavigator = ()=>{
           headerShown:false,
           drawerItemStyle:{
             // display:'none',
-          }
+          },
+
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'microphone'} type ={'font-awesome'} color = {color}></Icon>,
+
         }} 
         
         // options={{drawerLabel: NullComponent}}
@@ -5270,7 +5753,7 @@ const DrawerNavigator = ()=>{
 
           headerShown:false,
           drawerItemStyle:{
-            // display:'none',
+             display:'none',
           }
         }} 
         
@@ -5338,7 +5821,12 @@ const DrawerNavigator = ()=>{
           headerShown:false,
           drawerItemStyle:{
             // display:'none',
-          }
+          },
+
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'desktop'} type ={'font-awesome'} color = {color}></Icon>,
+
         }} 
         
         // options={{drawerLabel: NullComponent}}
@@ -5376,7 +5864,11 @@ const DrawerNavigator = ()=>{
           headerShown:false,
           drawerItemStyle:{
             // display:'none',
-          }
+          },
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'credit-card'} type ={'font-awesome'} color = {color}></Icon>,
+
         }} 
         
         // options={{drawerLabel: NullComponent}}
@@ -5410,7 +5902,7 @@ const DrawerNavigator = ()=>{
 
           headerShown:false,
           drawerItemStyle:{
-            // display:'none',
+             display:'none',
           }
         }} 
         
@@ -5449,7 +5941,7 @@ const DrawerNavigator = ()=>{
 
           headerShown:false,
           drawerItemStyle:{
-            // display:'none',
+             display:'none',
           }
         }} 
         
@@ -5486,7 +5978,12 @@ const DrawerNavigator = ()=>{
           headerShown:false,
           drawerItemStyle:{
             // display:'none',
-          }
+          },
+
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'newspaper-o'} type ={'font-awesome'} color = {color}></Icon>,
+
         }} 
         
         // options={{drawerLabel: NullComponent}}
@@ -5497,50 +5994,46 @@ const DrawerNavigator = ()=>{
 
 
 
-    <Drawer.Screen component = {Task} name = 'Task'
-    
-    options = {{
-      drawerItemStyle:{
-        activeBackgroundColor:'#424242',
-      }
-    }}
+<Drawer.Screen component = {Login} name = 'Logout'   options={{
+          // title: 'My home',
+          headerStyle: {
+            backgroundColor: '#ED8D8D',
+            // height:'50%',
+            // borderRadius:20,
+            // marginTop:20,
+            elevation: 0, // remove shadow on Android
+            shadowOpacity: 0, // remove shadow on iOS
+            
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold',
+            // color:'#ED8D8D',
+            color:'#ffff',
+            display:'none',
 
-    />
-
-    <Drawer.Screen component = {Levelsatu} name = 'Level 1'
-    options = {{
-      headerShown:false,
-      headerStyle :{
-        backgroundColor:'#424242',
-      },
-      drawerItemStyle:{
-        display:'none',
-      },
-
-    }}
-    />
+          },
 
 
-    <Drawer.Screen component = {scan} name = 'Scan'
-    options={{
-      headerShown:false,
-      drawerItemStyle:{
-        display:'none',
-      },
-      gestureEnabled:false,
-      swipeEnabled:false,
-    }}
 
-    />
+          headerShown:false,
+          drawerItemStyle:{
+            // display:'none',
+          },
 
-    <Drawer.Screen component = {Levelsaturun} name = 'Level 1 Edit'
-    options = {{
-      headerShown:false,
-      drawerItemStyle:{
-        display:'none',
-      },
-    }}
-    />
+          drawerIcon:({color}) => <Icon
+          size={23}
+          name={'sign-out'} type ={'font-awesome'} color = {color}></Icon>,
+
+        }} 
+        
+        // options={{drawerLabel: NullComponent}}
+        />
+
+
+
+
+  
 
   
 
@@ -5554,10 +6047,10 @@ const DrawerNavigator = ()=>{
 
 
 
-<Drawer.Screen
+{/* <Drawer.Screen
     component = {cobalogin} name = 'Coba Login'
     />
-    
+     */}
 
 
 
@@ -5636,7 +6129,7 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     padding:15,
     alignItems:'center',
-    backgroundColor:'#ED8D8D',
+    backgroundColor:COLORS.secondary,
     marginBottom:10,
  
   },
@@ -5820,6 +6313,37 @@ const styles = StyleSheet.create({
     height:250,
     // borderRadius:30,
   },
+
+
+
+
+
+
+  radioButtonContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginRight: 45
+  },
+  radioButton: {
+    height: 20,
+    width: 20,
+    backgroundColor: "#F8F8F8",
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: "#E6E6E6",
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  radioButtonIcon: {
+    height: 14,
+    width: 14,
+    borderRadius: 7,
+    backgroundColor: "#98CFB6"
+  },
+  radioButtonText: {
+    fontSize: 16,
+    marginLeft: 16
+  }
 
 
 
